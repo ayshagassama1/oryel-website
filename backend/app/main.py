@@ -23,8 +23,7 @@ app.add_middleware(
 )
 
 # Routers
-app.include_router(health.router)
-
+app.include_router(health.router, prefix="/api")
 
 @app.get("/")
 def root():
