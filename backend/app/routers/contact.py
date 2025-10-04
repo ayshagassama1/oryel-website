@@ -15,7 +15,6 @@ def submit_contact(
     form: ContactForm,
     settings: Settings = Depends(get_settings),
 ):
-   
     try:
         send_contact_email(
             settings=settings,

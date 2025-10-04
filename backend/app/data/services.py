@@ -1,0 +1,76 @@
+SERVICES = [
+    {
+        "id": "vitrine-moderne",
+        "title": "Vitrine Moderne",
+        "tagline": "Site vitrine professionnel, rapide et responsive",
+        "price_from": 800,
+        "currency": "EUR",
+        "duration": "1 à 2 semaines",
+        "target": "Commerces locaux, artisans, professions libérales",
+        "features": [
+            "Design moderne adapté à votre identité",
+            "Responsive mobile et tablette",
+            "Optimisation SEO de base",
+            "Formulaire de contact",
+            "Hébergement et nom de domaine la première année",
+        ],
+        "stack": ["React", "Tailwind CSS", "FastAPI"],
+    },
+    {
+        "id": "vitrine-ia",
+        "title": "Vitrine + IA",
+        "tagline": "Votre site avec un assistant conversationnel intégré",
+        "price_from": 1500,
+        "currency": "EUR",
+        "duration": "2 à 3 semaines",
+        "target": "Restaurants, boutiques, services avec questions récurrentes",
+        "features": [
+            "Tout ce qui est inclus dans Vitrine Moderne",
+            "Chatbot IA entraîné sur vos informations",
+            "Réponses automatiques 24h/24",
+            "Prise de réservation ou devis via le chatbot",
+            "Tableau de bord des conversations",
+        ],
+        "stack": ["React", "FastAPI", "OpenAI API", "LangChain"],
+    },
+    {
+        "id": "sur-mesure",
+        "title": "Sur Mesure",
+        "tagline": "Application web complète ou intégration IA avancée",
+        "price_from": None,
+        "currency": "EUR",
+        "duration": "Selon le projet",
+        "target": "Startups, PME avec besoins spécifiques",
+        "features": [
+            "Application web complète (backend + frontend)",
+            "APIs REST et intégrations tierces",
+            "Pipelines RAG sur vos données",
+            "Déploiement AWS et CI/CD",
+            "Accompagnement et formation équipe",
+        ],
+        "stack": ["Python", "FastAPI", "React", "PostgreSQL", "AWS", "Docker"],
+    },
+]
+
+
+PROJECTS = [
+    {
+        "id": "oryel-website",
+        "title": "Portfolio Oryel",
+        "description": "Portfolio personnel construit avec FastAPI et React, incluant un chatbot IA et un formulaire de contact intelligent.",
+        "stack": ["FastAPI", "React", "Tailwind CSS", "OpenAI", "AWS"],
+        "url": "https://oryel.dev",
+        "github": "https://github.com/aissatou-gassama/oryel-website",
+        "image": "/images/projects/oryel.png",
+        "category": "fullstack",
+    },
+    {
+        "id": "rag-assistant",
+        "title": "Assistant RAG documentaire",
+        "description": "Système de recherche augmentée par IA (RAG) permettant d'interroger des documents internes via un chatbot. Stack FastAPI + ChromaDB + LangChain + Gradio.",
+        "stack": ["Python", "FastAPI", "LangChain", "ChromaDB", "Gradio"],
+        "github": None,
+        "image": "/images/projects/rag.png",
+        "category": "ai",
+    },
+]
