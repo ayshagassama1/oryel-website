@@ -15,6 +15,9 @@ class Settings(BaseSettings):
     # OpenAI
     openai_api_key: str = ""
 
+    # Groq
+    groq_api_key: str = ""
+
     # Email (contact form)
     smtp_host: str = "smtp.gmail.com"
     smtp_port: int = 587

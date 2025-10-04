@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
-from app.routers import health, contact, services
+from app.routers import health, contact, services, chat
 
 settings = get_settings()
 
@@ -33,3 +33,4 @@ def root():
 
 app.include_router(contact.router, prefix="/api")
 app.include_router(services.router, prefix="/api")
+app.include_router(chat.router, prefix="/api")

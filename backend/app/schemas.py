@@ -11,3 +11,15 @@ class ContactForm(BaseModel):
 class ContactResponse(BaseModel):
     status: str
     message: str
+
+class ChatMessage(BaseModel):
+    role: str = Field(..., pattern="^(user|assistant)$")
+    content: str = Field(..., min_length=1, max_length=2000)
+
+
+class ChatRequest(BaseModel):
+    messages: list[ChatMessage] = Field(..., min_length=1, max_length=20)
+
+
+class ChatResponse(BaseModel):
+    reply: str
