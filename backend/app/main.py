@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
-from app.routers import health
+from app.routers import health, contact
 
 settings = get_settings()
 
@@ -12,8 +12,6 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# CORS - autorise le frontend React à appeler l'API.
-# En production, on restreindra aux domaines réels.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.allowed_origins.split(","),
@@ -32,3 +30,5 @@ def root():
         "version": "0.1.0",
         "docs": "/docs",
     }
+
+app.include_router(contact.router, prefix="/api")
