@@ -1,11 +1,3 @@
-/**
- * Client API centralisé.
- *
- * Toutes les requêtes vers le backend passent par ici.
- * En dev, Vite proxy /api vers localhost:8000 (voir vite.config.js).
- * En prod, on remplacera API_BASE par l'URL réelle.
- */
-
 const API_BASE = "/api";
 
 export async function fetchApi(endpoint, options = {}) {
@@ -29,8 +21,4 @@ export async function fetchApi(endpoint, options = {}) {
 
 export const api = {
   health: () => fetchApi("/health"),
-  // Les prochains endpoints seront ajoutés ici :
-  // contact: (data) => fetchApi("/contact", { method: "POST", body: JSON.stringify(data) }),
-  // services: () => fetchApi("/services"),
-  // chat: (message) => fetchApi("/chat", { method: "POST", body: JSON.stringify({ content: message }) }),
 };
