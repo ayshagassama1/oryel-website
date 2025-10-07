@@ -8,7 +8,7 @@ const tiers = [
   {
     icon: Globe,
     title: 'Vitrine Moderne',
-    price: '1 200 € – 1 800 €',
+    price: '1 200 € - 1 800 €',
     delay: 'Livré en 1 à 2 semaines',
     recommended: false,
     items: [
@@ -24,7 +24,7 @@ const tiers = [
   {
     icon: MessageSquare,
     title: 'Vitrine + Assistant IA',
-    price: '2 500 € – 3 500 €',
+    price: '2 500 € - 3 500 €',
     delay: 'Livré en 2 à 3 semaines',
     recommended: true,
     items: [

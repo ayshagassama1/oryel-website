@@ -4,9 +4,10 @@ import HeroSection from './components/HeroSection';
 import DemosSection from './components/DemosSection';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
+import ContactSection from './components/ContactSection';
  
 function App() {
-  const [, setPreselectedService] = useState('');
+  const [preselectedService, setPreselectedService] = useState('');
  
   const handleWantSameSite = (service) => {
     setPreselectedService(service);
@@ -20,6 +21,7 @@ function App() {
       <DemosSection onWantSameSite={handleWantSameSite} />
       <ServicesSection />
       <AboutSection />
+      <ContactSection preselectedService={preselectedService} />
     </div>
   );
 }

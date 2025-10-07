@@ -22,10 +22,8 @@ export default function HeroSection() {
  
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-teal-50/60 via-white to-gray-50/80" />
  
-      {/* Subtle dot pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
@@ -34,7 +32,6 @@ export default function HeroSection() {
         }}
       />
  
-      {/* Soft blobs for depth */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-teal-100/40 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-teal-50/60 rounded-full blur-3xl pointer-events-none" />
  
@@ -43,7 +40,6 @@ export default function HeroSection() {
         className="scroll-animate relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12"
       >
         <div className="max-w-3xl">
-          {/* Availability badge */}
           <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-100 text-teal-700 text-sm font-medium px-3 py-1.5 rounded-full mb-8">
             <span className="w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
             Disponible pour de nouveaux projets
@@ -77,7 +73,6 @@ export default function HeroSection() {
             </button>
           </div>
  
-          {/* Tags row */}
           <div className="flex flex-wrap items-center gap-6 mt-14 pt-8 border-t border-gray-100">
             {tags.map((tag, i) => (
               <span key={i} className="text-sm text-gray-500 flex items-center gap-1.5">
