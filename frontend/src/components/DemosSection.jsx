@@ -30,8 +30,8 @@ const demos = [
  
 export default function DemosSection({ onWantSameSite }) {
   const ref = useScrollAnimate();
-  const card0Ref = useScrollAnimate(0);
-  const card1Ref = useScrollAnimate(150);
+  const card0Ref = useScrollAnimate(100);
+  const card1Ref = useScrollAnimate(250);
   const cardRefs = [card0Ref, card1Ref];
  
   return (

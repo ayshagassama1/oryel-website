@@ -5,8 +5,8 @@ import { api } from '../services/api';
  
 export default function ContactSection({ preselectedService = '' }) {
   const ref = useScrollAnimate();
-  const cardLeftRef = useScrollAnimate(100);
-  const cardRightRef = useScrollAnimate(150);
+  const cardLeftRef = useScrollAnimate(200);
+  const cardRightRef = useScrollAnimate(250);
  
   const [form, setForm] = useState({
     name: '',

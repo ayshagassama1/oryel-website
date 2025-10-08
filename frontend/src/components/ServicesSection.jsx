@@ -56,9 +56,9 @@ const tiers = [
 export default function ServicesSection() {
   const ref = useScrollAnimate();
 
-  const card0Ref = useScrollAnimate(0);
-  const card1Ref = useScrollAnimate(100);
-  const card2Ref = useScrollAnimate(200);
+  const card0Ref = useScrollAnimate(100);
+  const card1Ref = useScrollAnimate(200);
+  const card2Ref = useScrollAnimate(300);
   const cardRefs = [card0Ref, card1Ref, card2Ref];
  
   return (

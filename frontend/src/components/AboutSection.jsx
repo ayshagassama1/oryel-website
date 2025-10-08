@@ -26,8 +26,8 @@ const highlights = [
  
 export default function AboutSection() {
   const ref = useScrollAnimate();
-  const bioRef = useScrollAnimate(100);
-  const stackRef = useScrollAnimate(200);
+  const bioRef = useScrollAnimate(200);
+  const stackRef = useScrollAnimate(300);
  
   return (
     <section id="apropos" className="py-16 bg-white">
