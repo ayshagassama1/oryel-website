@@ -47,4 +47,10 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(data),
     }),
-};
+
+  chat: (messages) =>
+    fetchApi('/chat', {
+      method: 'POST',
+      body: JSON.stringify({ messages }),
+    }),
+}; 

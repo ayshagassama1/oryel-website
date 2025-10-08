@@ -5,6 +5,7 @@ import DemosSection from './components/DemosSection';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
+import ChatBot from './components/ChatBot';
  
 function App() {
   const [preselectedService, setPreselectedService] = useState('');
@@ -22,6 +23,7 @@ function App() {
       <ServicesSection />
       <AboutSection />
       <ContactSection preselectedService={preselectedService} />
+      <ChatBot />
     </div>
   );
 }
