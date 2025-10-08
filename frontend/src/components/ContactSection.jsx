@@ -192,7 +192,7 @@ export default function ContactSection({ preselectedService = '' }) {
                   label: 'LinkedIn',
                 },
                 {
-                  href: 'https://www.malt.fr/profile/ayshagassama',
+                  href: 'https://www.malt.fr/profile/ndeyeaissatougassama',
                   icon: () => <span className="font-bold text-sm">M</span>,
                   label: 'Malt',
                 },
