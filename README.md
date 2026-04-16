@@ -26,7 +26,6 @@ Application fullstack construite avec **FastAPI** (backend) et **React** (fronte
 
 ```bash
 cp .env.example .env
-# Remplir les variables dans .env
 docker compose up --build
 ```
 
@@ -38,7 +37,7 @@ Le frontend est accessible sur `http://localhost:5173` et l'API sur `http://loca
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+source venv/bin/activate   
 pip install -r requirements.txt
 cp ../.env.example ../.env
 uvicorn app.main:app --reload
