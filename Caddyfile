@@ -1,11 +1,5 @@
 api.oryel.dev {
     reverse_proxy backend:8000
-<<<<<<< HEAD
-=======
-
-    # Headers CORS (FastAPI les gère déjà via middleware,
-    # mais on les ajoute ici pour les requêtes OPTIONS preflight)
->>>>>>> a0c0e41 (caddyfile et doc compose prod)
     encode gzip
 
     log {
