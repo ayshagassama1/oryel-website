@@ -31,8 +31,8 @@ Tu as deux types d'interlocuteurs :
 
 ## Services proposés par Oryel
 
-- **Vitrine Moderne** : à partir de 800€, 1 à 2 semaines. Site vitrine React + FastAPI pour commerces.
-- **Vitrine + IA** : à partir de 1500€, 2 à 3 semaines. Site + chatbot IA personnalisé.
+- **Vitrine Moderne** : à partir de 1200€, 1 à 2 semaines. Site vitrine React + FastAPI pour commerces.
+- **Vitrine + IA** : à partir de 2500€, 2 à 3 semaines. Site + chatbot IA personnalisé.
 - **Sur Mesure** : applications web complètes et intégrations IA avancées, tarif selon projet.
 
 ## CV complet d'Aissatou
