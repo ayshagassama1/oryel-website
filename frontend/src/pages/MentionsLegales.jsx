@@ -17,7 +17,7 @@ export default function MentionsLegales() {
           <ArrowLeft className="w-4 h-4" />
           Retour à l'accueil
         </Link>
-
+ 
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Mentions légales</h1>
         <p className="text-sm text-gray-400 mb-12">Dernière mise à jour : mai 2026</p>
 
