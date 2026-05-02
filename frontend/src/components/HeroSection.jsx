@@ -17,8 +17,8 @@ export default function HeroSection() {
     'Python / React / Laravel',
     'AWS Certified',
     'IA & Chatbots',
-    'Basée à Metz',
-  ];
+    'Automatisation',
+    'API & intégrations',];
  
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
