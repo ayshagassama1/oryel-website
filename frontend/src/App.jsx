@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DemosSection from './components/DemosSection';
@@ -7,15 +8,16 @@ import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
- 
-function App() {
+import MentionsLegales from './pages/MentionsLegales';
+
+function Home() {
   const [preselectedService, setPreselectedService] = useState('');
- 
+
   const handleWantSameSite = (service) => {
     setPreselectedService(service);
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
- 
+
   return (
     <div className="font-inter">
       <Navbar />
@@ -29,5 +31,14 @@ function App() {
     </div>
   );
 }
- 
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/mentions-legales" element={<MentionsLegales />} />
+    </Routes>
+  );
+}
+
 export default App;

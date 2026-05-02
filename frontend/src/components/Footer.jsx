@@ -1,18 +1,19 @@
+import { Link } from 'react-router-dom';
 import { Linkedin, Github } from 'lucide-react';
- 
+
 const scrollTo = (id) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
- 
+
 const navLinks = [
   { label: 'Démos', id: 'demos' },
   { label: 'Services', id: 'services' },
   { label: 'À propos', id: 'apropos' },
   { label: 'Contact', id: 'contact' },
 ];
- 
+
 export default function Footer() {
   const year = new Date().getFullYear();
- 
+
   return (
     <footer className="bg-gray-900 text-gray-400">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
@@ -24,7 +25,7 @@ export default function Footer() {
             <p className="text-sm">© {year} Oryel, Aissatou Gassama</p>
             <p className="text-sm">Dev Fullstack & IA</p>
           </div>
- 
+
           <div className="flex justify-center gap-6 flex-wrap">
             {navLinks.map((item) => (
               <button
@@ -36,7 +37,7 @@ export default function Footer() {
               </button>
             ))}
           </div>
- 
+
           <div className="flex justify-start sm:justify-end gap-3">
             <a
               href="https://linkedin.com/in/ndeye-aissatou-gassama"
@@ -67,11 +68,17 @@ export default function Footer() {
             </a>
           </div>
         </div>
- 
-        <div className="border-t border-gray-800 pt-6 text-center">
+
+        <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-gray-600">
-            SIREN 982 878 449 | 31 RUE Saint-Pierre 57000 Metz FRANCE
+            SIREN 982 878 449 | 31 Rue Saint-Pierre, 57000 Metz, France
           </p>
+          <Link
+            to="/mentions-legales"
+            className="text-xs text-gray-600 hover:text-teal-400 transition-colors"
+          >
+            Mentions légales & confidentialité
+          </Link>
         </div>
       </div>
     </footer>
