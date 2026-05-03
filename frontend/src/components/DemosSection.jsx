@@ -39,11 +39,10 @@ export default function DemosSection({ onWantSameSite }) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div ref={ref} className="scroll-animate text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Testez avant de choisir
+            Explorez des exemples concrets
           </h2>
           <p className="text-lg text-gray-500 max-w-xl mx-auto">
-            Des sites fonctionnels que vous pouvez tester. Imaginez le même
-            pour votre activité.
+            Parcourez des démos réalistes et imaginez la même expérience adaptée à votre activité.
           </p>
         </div>
  
