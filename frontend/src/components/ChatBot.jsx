@@ -79,7 +79,7 @@ export default function ChatBot() {
               <Bot className="w-4 h-4 text-white" />
             </div>
             <div>
-              <div className="text-white font-semibold text-sm">Assistant Oryel</div>
+              <div className="text-white font-semibold text-sm"> Assistant Oryel </div>
               <div className="text-teal-100 text-xs">
                 Répond en quelques secondes
               </div>

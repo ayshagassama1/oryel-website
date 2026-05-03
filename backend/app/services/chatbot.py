@@ -39,7 +39,7 @@ Tu as deux types d'interlocuteurs :
 
 {_CV_CONTENT}
 """
-
+ 
 def chat_completion(settings: Settings, messages: list[dict]) -> str:
     if not settings.groq_api_key:
         raise RuntimeError("GROQ_API_KEY non configurée")
