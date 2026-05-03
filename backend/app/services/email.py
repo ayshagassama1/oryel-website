@@ -28,7 +28,7 @@ Nouveau message reçu via le portfolio :
 Nom     : {name}
 Email   : {email}
 Service : {service or "Non précisé"}
-
+ 
 Message :
 {message}
 """
