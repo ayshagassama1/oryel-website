@@ -81,7 +81,7 @@ export default function DemosSection({ onWantSameSite }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-white border border-gray-200 hover:border-teal-300 hover:text-teal-600 text-gray-700 font-medium px-5 py-2.5 rounded-lg transition-all duration-200 text-sm group-hover:shadow-sm"
                   >
-                    Tester la démo
+                    Voir la démo
                     <ExternalLink className="w-4 h-4" />
                   </a>
                   <button
