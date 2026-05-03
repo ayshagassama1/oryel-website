@@ -9,12 +9,12 @@ import {
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
  
 const techStack = [
-  { group: 'Backend', items: ['Python', 'FastAPI', 'Django', 'Node.js'] },
+  { group: 'Backend', items: ['Python', 'FastAPI', 'Laravel', 'Node.js'] },
   { group: 'Frontend', items: ['React.js', 'Vue.js'] },
   { group: 'IA', items: ['LangChain', 'RAG', 'OpenAI API', 'Ollama'] },
-  { group: 'Data', items: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'] },
+  { group: 'Data', items: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch'] },
   { group: 'DevOps', items: ['Docker', 'AWS (Certified)', 'CI/CD'] },
-  { group: 'Aussi', items: ['PHP', 'Laravel'] },
+  { group: 'Aussi', items: ['PHP', 'Django'] },
 ];
  
 const highlights = [
@@ -40,7 +40,6 @@ export default function AboutSection() {
         </div>
  
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Bio */}
           <div ref={bioRef} className="scroll-animate">
             <div className="max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-5">

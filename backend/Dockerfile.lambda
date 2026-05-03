@@ -1,0 +1,12 @@
+FROM public.ecr.aws/lambda/python:3.12
+
+# Copier et installer les dépendances dans le répertoire Lambda
+COPY requirements.txt .
+RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}" --no-cache-dir
+
+# Copier le code applicatif
+COPY app/ ${LAMBDA_TASK_ROOT}/app/
+COPY handler.py ${LAMBDA_TASK_ROOT}/
+
+# Handler : handler.py → fonction handler
+CMD ["handler.handler"]
