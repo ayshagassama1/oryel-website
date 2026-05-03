@@ -13,7 +13,7 @@ const navLinks = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
-
+ 
   return (
     <footer className="bg-gray-900 text-gray-400">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
