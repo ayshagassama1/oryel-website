@@ -13,7 +13,7 @@ def send_contact_email(
     message: str,
 ) -> None:
     if not settings.smtp_user or not settings.smtp_password:
-        print(f"[DEV] Contact reçu : {name} <{email}> — {service or 'aucun service'}")
+        print(f"[DEV] Contact reçu : {name} <{email}> - {service or 'aucun service'}")
         print(f"[DEV] Message : {message}")
         return
 
