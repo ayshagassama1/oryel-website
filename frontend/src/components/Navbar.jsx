@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <button
           onClick={() => scrollTo('hero')}
-          className="font-bold text-xl tracking-tight text-gray-900"
+          className="font-bold text-2xl tracking-tight text-gray-900"
         >
           Ory<span className="text-teal-600">el</span>
         </button>
@@ -44,7 +44,7 @@ export default function Navbar() {
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors"
+              className="text-base font-medium text-gray-600 hover:text-teal-600 transition-colors"
             >
               {item.label}
             </button>
@@ -53,7 +53,7 @@ export default function Navbar() {
             href="https://calendly.com/ndeye-aissatou-gassama-sn/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+            className="bg-teal-600 hover:bg-teal-700 text-white text-base font-medium px-4 py-2 rounded-lg transition-colors"
           >
             Prendre rendez-vous
           </a>
