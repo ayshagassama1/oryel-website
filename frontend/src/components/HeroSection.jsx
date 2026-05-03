@@ -42,7 +42,7 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-100 text-teal-700 text-sm font-medium px-3 py-1.5 rounded-full mb-8">
             <span className="w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
-            Disponible pour de nouveaux projets
+            Remote · France & Luxembourg
           </div>
  
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
