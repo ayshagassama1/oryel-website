@@ -43,10 +43,10 @@ export default function AboutSection() {
           <div ref={bioRef} className="scroll-animate">
             <div className="max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-5">
-                Je m'appelle <strong>Aissatou Gassama</strong>. Je suis développeuse
+                Je m'appelle <strong>Aissatou Gassama</strong>. Je suis développeur
                 fullstack freelance, basée à Metz. Diplômée d’un Master en Informatique,
                  j’ai travaillé sur des sujets de Machine Learning au LIMOS,
-                puis comme développeuse backend au Luxembourg. En parallèle, j’ai cofondé&nbsp;
+                puis comme développeur backend au Luxembourg. En parallèle, j’ai cofondé&nbsp;
                 <a href="https://sunuconseil.com" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
                   SunuConseil
                 </a>
