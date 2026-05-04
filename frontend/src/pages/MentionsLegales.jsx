@@ -39,8 +39,8 @@ export default function MentionsLegales() {
               <p><span className="font-medium text-gray-700">Siège social :</span> 31 Rue Saint-Pierre, 57000 Metz, France</p>
               <p>
                 <span className="font-medium text-gray-700">Contact :</span>{' '}
-                <a href="mailto:ndeye.aissatou.gassama.sn@gmail.com" className="text-teal-600 hover:underline">
-                  ndeye.aissatou.gassama.sn@gmail.com
+                <a href="mailto:contact@oryel.dev" className="text-teal-600 hover:underline">
+                  contact@oryel.dev
                 </a>
               </p>
             </div>
@@ -107,8 +107,8 @@ export default function MentionsLegales() {
                   Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès,
                   de rectification, d'effacement et d'opposition concernant vos données. Pour exercer ces droits,
                   contactez :{' '}
-                  <a href="mailto:ndeye.aissatou.gassama.sn@gmail.com" className="text-teal-600 hover:underline">
-                    ndeye.aissatou.gassama.sn@gmail.com
+                  <a href="mailto:contact@oryel.dev" className="text-teal-600 hover:underline">
+                    contact@oryel.dev
                   </a>
                 </p>
                 <p className="mt-1">
