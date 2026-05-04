@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="font-bold text-lg text-white mb-1">
               Ory<span className="text-teal-400">el</span>
             </div>
-            <p className="text-sm">© {year} Oryel, Aissatou Gassama</p>
+            <p className="text-sm">© {year} Oryel, N. Aissatou Gassama</p>
             <p className="text-sm">Dev Fullstack & IA</p>
           </div>
 
