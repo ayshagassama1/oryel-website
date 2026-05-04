@@ -9,7 +9,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import MentionsLegales from './pages/MentionsLegales';
-
+ 
 function Home() {
   const [preselectedService, setPreselectedService] = useState('');
 
