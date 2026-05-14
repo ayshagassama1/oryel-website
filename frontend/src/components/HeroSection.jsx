@@ -14,11 +14,11 @@ export default function HeroSection() {
   };
  
   const tags = [
-    'Python / React / Laravel',
-    'AWS Certified',
+    'Développement web',
     'IA & Chatbots',
     'Automatisation',
-    'API & intégrations',];
+    'API & intégrations',
+    'Audit de sites',  ];
  
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
