@@ -9,7 +9,8 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import MentionsLegales from './pages/MentionsLegales';
- 
+import ProcessSection from './components/ProcessSection';
+
 function Home() {
   const [preselectedService, setPreselectedService] = useState('');
 
@@ -23,7 +24,8 @@ function Home() {
       <Navbar />
       <HeroSection />
       <DemosSection onWantSameSite={handleWantSameSite} />
-      <ServicesSection />
+      <ProcessSection />
+      <ServicesSection onWantSameSite={handleWantSameSite} />
       <AboutSection />
       <ContactSection preselectedService={preselectedService} />
       <Footer />
