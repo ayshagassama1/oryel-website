@@ -66,16 +66,6 @@ export default function AboutSection() {
  
             <div className="flex flex-wrap gap-3 mt-8">
               <a
-                  href="/cv.pdf"
-                  download="Aissatou_Gassama_CV.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors"
-                >
-                <Download className="w-4 h-4" />
-                Télécharger mon CV (PDF)
-              </a>
-              <a
                 href="https://linkedin.com/in/ndeye-aissatou-gassama"
                 target="_blank"
                 rel="noopener noreferrer"
