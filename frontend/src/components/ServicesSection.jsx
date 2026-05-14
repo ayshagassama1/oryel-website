@@ -1,9 +1,9 @@
 import { Globe, MessageSquare, Settings, Check, Star } from 'lucide-react';
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
- 
+
 const scrollTo = (id) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
- 
+
 const tiers = [
   {
     icon: Globe,
@@ -19,7 +19,7 @@ const tiers = [
       'SEO local (fiche Google Business, balises, vitesse)',
       'Hébergement + nom de domaine (1ère année incluse)',
     ],
-    cta: 'En savoir plus',
+    cta: 'Je veux ça pour mon commerce',
   },
   {
     icon: MessageSquare,
@@ -34,7 +34,7 @@ const tiers = [
       'Prise de réservation automatique',
       'Formation pour mettre à jour le chatbot vous-même',
     ],
-    cta: 'En savoir plus',
+    cta: 'Je veux ça pour mon commerce',
   },
   {
     icon: Settings,
@@ -52,15 +52,22 @@ const tiers = [
     cta: 'Demander un devis',
   },
 ];
- 
-export default function ServicesSection() {
+
+export default function ServicesSection({ onWantSameSite }) {
   const ref = useScrollAnimate();
 
   const card0Ref = useScrollAnimate(100);
   const card1Ref = useScrollAnimate(200);
   const card2Ref = useScrollAnimate(300);
   const cardRefs = [card0Ref, card1Ref, card2Ref];
- 
+
+  const handleCta = (tier) => {
+    if (onWantSameSite) {
+      onWantSameSite(tier.title);
+    }
+    scrollTo('contact');
+  };
+
   return (
     <section id="services" className="py-16 bg-gray-50/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -72,7 +79,7 @@ export default function ServicesSection() {
             Trois formules. Pas de surprise.
           </p>
         </div>
- 
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {tiers.map((tier, i) => {
             const Icon = tier.icon;
@@ -95,7 +102,7 @@ export default function ServicesSection() {
                     </span>
                   </div>
                 )}
- 
+
                 <div
                   className={`inline-flex p-3 rounded-xl mb-5 w-fit ${
                     tier.recommended ? 'bg-white/20' : 'bg-teal-50'
@@ -107,7 +114,7 @@ export default function ServicesSection() {
                     }`}
                   />
                 </div>
- 
+
                 <h3
                   className={`text-lg font-bold mb-1 ${
                     tier.recommended ? 'text-white' : 'text-gray-900'
@@ -129,7 +136,7 @@ export default function ServicesSection() {
                 >
                   {tier.delay}
                 </p>
- 
+
                 <ul className="space-y-3 mb-8 flex-1">
                   {tier.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2.5">
@@ -148,9 +155,9 @@ export default function ServicesSection() {
                     </li>
                   ))}
                 </ul>
- 
+
                 <button
-                  onClick={() => scrollTo('contact')}
+                  onClick={() => handleCta(tier)}
                   className={`w-full py-3 rounded-lg font-semibold text-sm transition-all duration-200 ${
                     tier.recommended
                       ? 'bg-white text-teal-600 hover:bg-teal-50'
