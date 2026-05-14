@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-gray-600">
-            SIREN 982 878 449 | 31 Rue Saint-Pierre, 57000 Metz, France
+            SIREN 982 878 449 · Code APE : 6201Z - Programmation informatique | 31 Rue Saint-Pierre, 57000 Metz, France
           </p>
           <Link
             to="/mentions-legales"
