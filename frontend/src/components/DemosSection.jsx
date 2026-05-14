@@ -1,13 +1,13 @@
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
 import { Utensils, ShoppingBag, ExternalLink, Sparkles } from 'lucide-react';
- 
+
 const demos = [
   {
     icon: Utensils,
     title: 'Site de Restaurant',
     service: 'Vitrine + IA',
     description:
-      "Un site avec menu interactif, réservation en ligne et un chatbot qui répond aux questions de vos clients. Horaires, plat du jour, allergènes... il gère.",
+      "Menu interactif, réservation en ligne et chatbot intégré. Pendant le service, quand le téléphone sonne et que personne ne peut décrocher, le site prend le relais.",
     url: 'https://restaurant.oryel.dev',
     tag: 'Vitrine + IA',
     color: 'from-orange-50 to-amber-50',
@@ -19,7 +19,7 @@ const demos = [
     title: 'Boutique Locale',
     service: 'Vitrine + IA',
     description:
-      "Un site vitrine pour votre commerce avec catalogue produits, un assistant IA pour aider les visiteurs, et du click & collect.",
+      "Catalogue produits et assistant IA qui joue le rôle de conseiller : il pose des questions, comprend ce que cherche le visiteur et l'oriente vers le bon produit.",
     url: 'https://boutique.oryel.dev',
     tag: 'Vitrine + IA',
     color: 'from-violet-50 to-purple-50',
@@ -27,13 +27,13 @@ const demos = [
     iconColor: 'text-violet-600',
   },
 ];
- 
+
 export default function DemosSection({ onWantSameSite }) {
   const ref = useScrollAnimate();
   const card0Ref = useScrollAnimate(100);
   const card1Ref = useScrollAnimate(250);
   const cardRefs = [card0Ref, card1Ref];
- 
+
   return (
     <section id="demos" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -45,7 +45,7 @@ export default function DemosSection({ onWantSameSite }) {
             Parcourez des démos réalistes et imaginez la même expérience adaptée à votre activité.
           </p>
         </div>
- 
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {demos.map((demo, i) => {
             const Icon = demo.icon;
@@ -65,14 +65,14 @@ export default function DemosSection({ onWantSameSite }) {
                     {demo.tag}
                   </span>
                 </div>
- 
+
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {demo.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   {demo.description}
                 </p>
- 
+
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href={demo.url}
