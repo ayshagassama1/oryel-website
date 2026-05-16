@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DemosSection from './components/DemosSection';
@@ -10,8 +10,9 @@ import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import MentionsLegales from './pages/MentionsLegales';
 import ProcessSection from './components/ProcessSection';
+import CookieConsent from './components/CookieConsent';
 
-function Home() {
+function Home({ onWantSameSite }) {
   const [preselectedService, setPreselectedService] = useState('');
 
   const handleWantSameSite = (service) => {
@@ -36,10 +37,14 @@ function Home() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/mentions-legales" element={<MentionsLegales />} />
-    </Routes>
+    <>
+      <CookieConsent />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 

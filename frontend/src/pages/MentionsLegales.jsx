@@ -124,13 +124,48 @@ export default function MentionsLegales() {
 
           <section className="mb-10">
             <h2 className="text-lg font-semibold text-gray-800 mb-3 pb-2 border-b border-gray-100">
-              Cookies
+              Cookies et mesure d'audience
             </h2>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Ce site n'utilise pas de cookies de tracking ou de mesure d'audience. Seuls des cookies
-              strictement nécessaires au fonctionnement technique du site peuvent être déposés, et ne
-              requièrent pas votre consentement.
-            </p>
+            <div className="text-gray-600 text-sm leading-relaxed space-y-4">
+              <div>
+                <h3 className="font-medium text-gray-700 mb-1">Google Analytics</h3>
+                <p>
+                  Ce site utilise Google Analytics (identifiant <code className="bg-gray-100 px-1 rounded text-xs font-mono">G-CGYSSETX9P</code>) pour
+                  mesurer l'audience de façon anonyme : pages consultées, durée de session, source du trafic.
+                  Ce service n'est activé qu'après votre consentement explicite.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-700 mb-1">Données transmises</h3>
+                <p>
+                  Google Analytics collecte des données pseudonymisées (adresse IP tronquée) et les transfère
+                  vers des serveurs de Google LLC dans le cadre du Data Privacy Framework (DPF) UE–États-Unis.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-700 mb-1">Consentement et retrait</h3>
+                <p>
+                  Votre choix est enregistré dans le stockage local (<code className="bg-gray-100 px-1 rounded text-xs font-mono">localStorage</code>)
+                  de votre navigateur. Vous pouvez le modifier à tout moment en vidant le cache de votre navigateur,
+                  ou en utilisant l'extension officielle de Google :{' '}
+                  
+                  <a  href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:underline"
+                  >
+                    Google Analytics Opt-out
+                  </a>.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-700 mb-1">Cookies techniques</h3>
+                <p>
+                  En dehors de Google Analytics, seuls des cookies strictement nécessaires au fonctionnement
+                  technique du site peuvent être déposés, sans nécessiter votre consentement.
+                </p>
+              </div>
+            </div>
           </section>
 
           <section className="mb-10">
