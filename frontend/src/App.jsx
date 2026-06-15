@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DemosSection from './components/DemosSection';
@@ -12,7 +13,7 @@ import MentionsLegales from './pages/MentionsLegales';
 import ProcessSection from './components/ProcessSection';
 import CookieConsent from './components/CookieConsent';
 
-function Home({ onWantSameSite }) {
+function Home() {
   const [preselectedService, setPreselectedService] = useState('');
 
   const handleWantSameSite = (service) => {
@@ -35,17 +36,23 @@ function Home({ onWantSameSite }) {
   );
 }
 
-function App() {
+function RootLayout() {
   return (
     <>
       <CookieConsent />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mentions-legales" element={<MentionsLegales />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <Outlet />
     </>
   );
 }
 
-export default App;
+export const routes = [
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'mentions-legales', element: <MentionsLegales /> },
+      { path: '*', element: <Home /> },
+    ],
+  },
+];

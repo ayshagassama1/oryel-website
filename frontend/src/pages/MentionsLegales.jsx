@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 
 export default function MentionsLegales() {
   useEffect(() => {
@@ -10,10 +10,10 @@ export default function MentionsLegales() {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Mentions légales - Oryel</title>
         <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      </Head>
       <div className="min-h-screen bg-white font-inter">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
           <Link
