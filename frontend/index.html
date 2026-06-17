@@ -14,20 +14,29 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Oryel — Développeur Fullstack & IA" />
     <meta name="twitter:description" content="React, Python, LangChain, OpenAI. Disponible pour missions freelance et CDI." />
+
+    <meta property="og:image" content="https://oryel.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Oryel, développeur fullstack et IA freelance à Metz" />
+    <meta property="og:site_name" content="Oryel" />
+    <meta name="twitter:image" content="https://oryel.dev/og-image.png" />
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Aissatou Gassama",
+      "@id": "https://oryel.dev/#aissatou",
+      "name": "Ndeye Aissatou Gassama",
       "alternateName": "Oryel",
       "url": "https://oryel.dev/",
       "jobTitle": "Développeur Fullstack & IA",
       "knowsLanguage": ["fr", "en"],
       "knowsAbout": ["React", "Python", "FastAPI", "LangChain", "OpenAI API", "AWS", "RAG"],
+      "worksFor": { "@id": "https://oryel.dev/#oryel" },
       "sameAs": [
         "https://github.com/ayshagassama1",
         "https://www.linkedin.com/in/ndeye-aissatou-gassama",
@@ -39,9 +48,36 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
+      "@type": "ProfessionalService",
+      "@id": "https://oryel.dev/#oryel",
       "name": "Oryel",
-      "url": "https://oryel.dev/"
+      "url": "https://oryel.dev/",
+      "image": "https://oryel.dev/og-image.png",
+      "description": "Création de sites web, d'applications et d'assistants IA sur mesure pour TPE, PME et professionnels du bien-être. Développeur fullstack freelance basé à Metz.",
+      "email": "contact@oryel.dev",
+      "priceRange": "€€",
+      "founder": { "@id": "https://oryel.dev/#aissatou" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "31 Rue Saint-Pierre",
+        "postalCode": "57000",
+        "addressLocality": "Metz",
+        "addressRegion": "Grand Est",
+        "addressCountry": "FR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 49.1193, "longitude": 6.1757 },
+      "areaServed": ["Metz", "Thionville", "Nancy", "Moselle", "Strasbourg", "Alsace", "Grand Est", "France", "Luxembourg"]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://oryel.dev/#website",
+      "name": "Oryel",
+      "url": "https://oryel.dev/",
+      "publisher": { "@id": "https://oryel.dev/#oryel" }
     }
     </script>
 
