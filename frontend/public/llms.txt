@@ -7,18 +7,18 @@ Développeur Fullstack & IA, freelance basé en France (Metz).
 - Déploiement AWS (Lambda, S3, CloudFront)
 
 ## Stack technique
-React, Vite, Tailwind CSS, Python 3.12, FastAPI, LangChain, OpenAI API, Groq, AWS Lambda, S3, CloudFront, Docker, GitHub Actions
+React, Vite, Tailwind CSS, Python 3.12, FastAPI, OpenAI API, Groq, AWS Lambda, S3, CloudFront, Docker, GitHub Actions
 
 ## Expérience
 - 10 mois backend dev + IA chez Evo Agency (Luxembourg)
-- Co-fondatrice SunuConseil (Dakar) — outils internes + agents IA
+- Co-fondatrice SunuConseil (Dakar) (outils internes + agents IA)
 - Master Data Science, ISIMA
 - AWS Certified
 
 ## Réalisations
-- oryel.dev — portfolio fullstack avec chatbot IA
-- restaurant.oryel.dev — démo vitrine restaurant avec assistant IA (Le Botaniste)
-- boutique.oryel.dev — démo vitrine bijouterie avec assistant IA (Atelier Lumière)
+- oryel.dev : portfolio fullstack avec chatbot IA
+- restaurant.oryel.dev : démo vitrine restaurant avec assistant IA (Le Botaniste)
+- boutique.oryel.dev : démo vitrine bijouterie avec assistant IA (Atelier Lumière)
 
 ## Contact
 Site : https://oryel.dev/

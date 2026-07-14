@@ -10,9 +10,9 @@ Application fullstack construite avec **FastAPI** (backend) et **React** (fronte
 |------------|--------------------------------------|
 | Backend    | Python 3.12, FastAPI, Pydantic       |
 | Frontend   | React 18, Vite, Tailwind CSS         |
-| IA         | OpenAI API (chatbot assistant)       |
+| IA         | GROQ (chatbot assistant)       |
 | Base de données | PostgreSQL (à venir)            |
-| Infra      | Docker, AWS (EC2, S3, CloudFront)    |
+| Infra      | Docker, AWS (Lambda, S3, CloudFront)    |
 
 ## Lancer le projet en local
 
@@ -48,28 +48,6 @@ uvicorn app.main:app --reload
 cd frontend
 npm install
 npm run dev
-```
-
-## Architecture
-
-```
-Oryel-website/
-├── backend/            # API FastAPI
-│   ├── app/
-│   │   ├── main.py     # Point d'entrée FastAPI
-│   │   ├── config.py   # Configuration (pydantic-settings)
-│   │   └── routers/    # Routes organisées par domaine
-│   ├── requirements.txt
-│   └── Dockerfile
-├── frontend/           # Application React
-│   ├── src/
-│   │   ├── components/ # Composants réutilisables
-│   │   ├── pages/      # Pages principales
-│   │   ├── hooks/      # Custom hooks
-│   │   └── services/   # Appels API
-│   ├── package.json
-│   └── Dockerfile
-└── docker-compose.yml
 ```
 
 ## Auteure
