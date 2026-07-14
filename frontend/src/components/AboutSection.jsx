@@ -75,7 +75,9 @@ export default function AboutSection() {
                 LinkedIn
               </a>
               <a
-                href="#"
+                href="https://www.malt.fr/profile/ndeyeaissatougassama"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-gray-200 hover:border-teal-300 hover:text-teal-600 text-gray-600 font-medium px-5 py-2.5 rounded-lg text-sm transition-all"
               >
                 <span className="font-bold text-xs">M</span>
