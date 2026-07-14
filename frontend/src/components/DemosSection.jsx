@@ -220,15 +220,11 @@ export default function DemosSection({ onWantSameSite }) {
           </button>
         </div>
 
-        {/* ── Autres projets ── */}
-        <div ref={subTitleRef} className="scroll-animate mb-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-px flex-1 bg-gray-100" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 whitespace-nowrap">
-              Autres projets
-            </span>
-            <div className="h-px flex-1 bg-gray-100" />
-          </div>
+        {/*  Autres projets  */}
+        <div ref={subTitleRef} className="scroll-animate mb-8 pt-4">
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            Autres projets
+          </h3>
           <p className="text-gray-500 text-sm max-w-lg">
             En dehors des missions client, je construis des produits. Deux projets en cours avec SunuConseil.
           </p>
