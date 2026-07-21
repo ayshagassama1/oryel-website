@@ -38,6 +38,18 @@ const clientDemos = [
     borderColor: 'border-teal-200',
     bgColor: 'bg-teal-50',
   },
+  {
+    title: 'Le clos des Mirabelles',
+    type: 'Gîte',
+    description:
+      "Site de réservation directe pour un gîte, avec assistant IA multilingue. Il répond aux questions des voyageurs avant la réservation, à toute heure, sans remplacer l'accueil du propriétaire.",
+    url: 'https://gite.oryel.dev',
+    screenshot: '/screenshots/gite.png',
+    screenshotAlt: "Page d'accueil du Clos des Mirabelles, gîte fictif",
+    accentColor: 'text-rose-600',
+    borderColor: 'border-rose-200',
+    bgColor: 'bg-rose-50',
+  },
 ];
 
 const otherProjects = [
@@ -182,7 +194,8 @@ export default function DemosSection({ onWantSameSite }) {
   const demo0Ref = useScrollAnimate(100);
   const demo1Ref = useScrollAnimate(200);
   const demo2Ref = useScrollAnimate(300);
-  const demoRefs = [demo0Ref, demo1Ref, demo2Ref];
+  const demo3Ref = useScrollAnimate(400);
+  const demoRefs = [demo0Ref, demo1Ref, demo2Ref, demo3Ref];
 
   const proj0Ref = useScrollAnimate(100);
   const proj1Ref = useScrollAnimate(200);
@@ -200,11 +213,11 @@ export default function DemosSection({ onWantSameSite }) {
             Sites vitrine avec chatbot IA
           </h2>
           <p className="text-gray-500 max-w-xl">
-            Trois sites fonctionnels, avec chatbot IA. 
+            Quatre sites fonctionnels, avec chatbot IA. 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {clientDemos.map((demo, i) => (
             <ClientDemoCard key={i} demo={demo} animRef={demoRefs[i]} />
           ))}
@@ -225,7 +238,7 @@ export default function DemosSection({ onWantSameSite }) {
           <h3 className="text-xl font-bold text-gray-900 mb-2">
             Autres projets
           </h3>
-          <p className="text-gray-500 text-sm max-w-lg">
+          <p className="text-gray-500 text-sm max-w-2xl">
             En dehors des missions client, je construis des produits. Deux projets en cours avec SunuConseil.
           </p>
         </div>
