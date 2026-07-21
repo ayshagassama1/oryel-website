@@ -58,7 +58,8 @@ const otherProjects = [
     type: 'Site vitrine corporate',
     badge: null,
     description:
-      "Vitrine et back-office d'un cabinet de conseil IT fondé à Dakar. Authentification, dashboard admin, gestion de blog et d'équipe. Stack Laravel · Vue.js · MySQL · AWS.",
+      "Vitrine et back-office d'un cabinet de conseil IT fondé à Dakar. Authentification, dashboard admin, gestion de blog et d'équipe. ",
+    stack: ['Laravel', 'Vue.js', 'MySQL', 'AWS', 'EC2'],  
     url: 'https://sunuconseil.com',
     screenshot: '/screenshots/sunuconseil.png',
     screenshotAlt: "Page d'accueil de SunuConseil, cabinet de conseil IT à Dakar",
@@ -72,7 +73,8 @@ const otherProjects = [
     badge: 'En cours',
     description:
       "Digitalise la carte d'un restaurant en quelques heures : un QR code par table, les plats en photos sur le téléphone du client, un dashboard pour tout gérer. V1 live, commande et paiement en cours de développement.",
-    url: 'https://sunumenu.sunuconseil.com',
+    stack: ['React', 'FastAPI', 'AWS Lambda', 'PostgreSQL'],
+      url: 'https://sunumenu.sunuconseil.com',
     screenshot: '/screenshots/sunumenu.png',
     screenshotAlt: "Interface de SunuMenu, menu digital par QR code pour restaurants",
     accentColor: 'text-teal-600',
@@ -172,7 +174,19 @@ function OtherProjectCard({ project, animRef }) {
         <h3 className="text-base font-bold text-gray-900 mb-2">{project.title}</h3>
         <p className="text-sm text-gray-500 leading-relaxed flex-1">{project.description}</p>
 
-        
+        {project.stack && (
+          <div className="flex flex-wrap gap-1.5 mt-3">
+            {project.stack.map((tech) => (
+              <span
+                key={tech}
+                className="text-xs font-medium text-gray-600 bg-gray-50 border border-gray-100 px-2 py-0.5 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+
         <a  href={project.url}
           target="_blank"
           rel="noopener noreferrer"
