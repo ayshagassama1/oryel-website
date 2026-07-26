@@ -4,10 +4,9 @@ import {
   Globe2,
   Building2,
   Linkedin,
-  Download,
 } from 'lucide-react';
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
- 
+
 const techStack = [
   { group: 'Backend', items: ['Python', 'FastAPI', 'Laravel', 'Node.js'] },
   { group: 'Frontend', items: ['React.js', 'Vue.js'] },
@@ -16,19 +15,19 @@ const techStack = [
   { group: 'DevOps', items: ['Docker', 'AWS (Certified)', 'CI/CD'] },
   { group: 'Aussi', items: ['PHP', 'Django'] },
 ];
- 
+
 const highlights = [
   { icon: GraduationCap, text: 'Master Data Science, ISIMA Clermont-Ferrand' },
   { icon: Award, text: 'AWS Certified Cloud Practitioner' },
   { icon: Globe2, text: 'Expérience en France, au Luxembourg et au Sénégal' },
   { icon: Building2, text: 'Co-fondatrice de SunuConseil (IT consulting, Dakar)' },
 ];
- 
+
 export default function AboutSection() {
   const ref = useScrollAnimate();
   const bioRef = useScrollAnimate(200);
   const stackRef = useScrollAnimate(300);
- 
+
   return (
     <section id="apropos" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -38,16 +37,29 @@ export default function AboutSection() {
           </h2>
           <div className="w-12 h-1 bg-teal-500 rounded-full" />
         </div>
- 
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div ref={bioRef} className="scroll-animate">
-            <div className="max-w-none">
+            <div className="max-w-none flow-root">
+              <img
+                src="/aissatou-gassama.jpeg"
+                alt="Aissatou Gassama, développeur fullstack freelance à Metz"
+                width="300"
+                height="375"
+                loading="lazy"
+                className="float-left w-32 sm:w-[150px] aspect-[4/5] object-cover object-center rounded-2xl mr-6 mb-3"
+              />
               <p className="text-lg text-gray-700 leading-relaxed mb-5">
                 Je m'appelle <strong>N. Aissatou Gassama</strong>. Je suis développeur
-                fullstack freelance, basée à Metz. Diplômée d’un Master en Informatique,
-                 j’ai travaillé sur des sujets de Machine Learning au LIMOS,
-                puis comme développeur backend au Luxembourg. En parallèle, j’ai cofondé&nbsp;
-                <a href="https://sunuconseil.com" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
+                fullstack freelance, basée à Metz. Diplômée d'un Master en Informatique,
+                j'ai travaillé sur des sujets de Machine Learning au LIMOS,
+                puis comme développeur backend au Luxembourg. En parallèle, j'ai cofondé&nbsp;
+                <a
+                  href="https://sunuconseil.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-600 hover:underline"
+                >
                   SunuConseil
                 </a>
                 , une société de consulting IT à Dakar, où je développe le site
@@ -56,14 +68,14 @@ export default function AboutSection() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 Aujourd'hui, je travaille sous le nom{' '}
                 <strong className="text-teal-600">Oryel</strong>. Je conçois et développe
-                des applications web complètes, du backend au déploiement, et j’intègre
-                des fonctionnalités d’intelligence artificielle directement utiles.
-                Concrètement : des chatbots qui répondent, de l’automatisation qui fait
+                des applications web complètes, du backend au déploiement, et j'intègre
+                des fonctionnalités d'intelligence artificielle directement utiles.
+                Concrètement : des chatbots qui répondent, de l'automatisation qui fait
                 gagner du temps, et des systèmes de recherche qui trouvent vraiment
-                l’information.
+                l'information.
               </p>
             </div>
- 
+
             <div className="flex flex-wrap gap-3 mt-8">
               <a
                 href="https://linkedin.com/in/ndeye-aissatou-gassama"
@@ -84,7 +96,7 @@ export default function AboutSection() {
                 Malt
               </a>
             </div>
- 
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
               {highlights.map((h, i) => {
                 const Icon = h.icon;
@@ -104,7 +116,7 @@ export default function AboutSection() {
               })}
             </div>
           </div>
- 
+
           <div ref={stackRef} className="scroll-animate">
             <h3 className="text-lg font-semibold text-gray-800 mb-6">
               Stack technique
