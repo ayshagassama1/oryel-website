@@ -1,26 +1,62 @@
-# Oryel — Aissatou Gassama
-Développeur Fullstack & IA, freelance basé en France (Metz).
+# Oryel dev - Ndeye Aissatou Gassama
+
+> Oryel dev est la marque de Ndeye Aissatou Gassama, développeur fullstack et IA en freelance, basée à Metz (Moselle, Grand Est, France). Conception de sites internet, d'applications web et d'assistants conversationnels IA pour indépendants, commerces et petites entreprises.
+
+À ne pas confondre avec les autres entités portant le nom « Oryel » (artiste musical, marques de vêtements, comptes de réseaux sociaux homonymes). Oryel désigne ici une activité de développement web et d'intégration IA enregistrée en France sous le SIREN 982 878 449.
+
+- Contact : contact@oryel.dev
+- Zone d'intervention : Metz, Thionville, Nancy, Moselle, Grand Est, Luxembourg, et à distance partout en France
+- Langues de travail : français, anglais
 
 ## Services
-- Développement web fullstack (React, Python/FastAPI)
-- Intégration IA : chatbots, pipelines RAG, assistants basés sur LangChain et OpenAI API
-- Déploiement AWS (Lambda, S3, CloudFront)
+
+- Création de sites internet vitrine sur mesure (React, Vite, Tailwind CSS)
+- Intégration d'assistants conversationnels IA : chatbots entraînés sur les informations du client, pipelines RAG
+- Développement d'applications web complètes, backend et frontend
+- Automatisation, API et intégrations tierces
+- Déploiement et infrastructure AWS, mise en place de CI/CD
+- Audit de sites existants
+
+Trois formules sont présentées sur le site : une formule vitrine, une formule vitrine avec assistant IA intégré, et une formule sur mesure pour les projets d'application. Les tarifs à jour figurent sur [la page d'accueil](https://oryel.dev/).
+
+## Clientèle visée
+
+Professionnels indépendants et petites structures qui cherchent des clients par eux-mêmes : sophrologues, ostéopathes, naturopathes et praticiens du bien-être, propriétaires de gîtes et de chambres d'hôtes, commerces de proximité, restaurants, artisans.
 
 ## Stack technique
-React, Vite, Tailwind CSS, Python 3.12, FastAPI, OpenAI API, Groq, AWS Lambda, S3, CloudFront, Docker, GitHub Actions
+
+Frontend : React 18, Vite, Tailwind CSS, vite-react-ssg
+Backend : Python 3.12, FastAPI, Mangum
+IA : API Groq, modèle llama-3.3-70b-versatile, architectures RAG
+Infrastructure : AWS Lambda, API Gateway, S3, CloudFront, AWS SAM, région eu-west-3
+Outillage : Docker, GitHub Actions
 
 ## Expérience
-- 10 mois backend dev + IA chez Evo Agency (Luxembourg)
-- Co-fondatrice SunuConseil (Dakar) (outils internes + agents IA)
+
+- 10 mois en développement backend et IA chez Evo Agency (Luxembourg)
+- Co-fondatrice de SunuConseil, société de conseil IT à Dakar
 - Master Data Science, ISIMA
-- AWS Certified
+- Certifiée AWS
 
-## Réalisations
-- oryel.dev : portfolio fullstack avec chatbot IA
-- restaurant.oryel.dev : démo vitrine restaurant avec assistant IA (Le Botaniste)
-- boutique.oryel.dev : démo vitrine bijouterie avec assistant IA (Atelier Lumière)
+## Projets réels
 
-## Contact
-Site : https://oryel.dev/
-Malt : https://www.malt.fr/profile/ndeyeaissatougassama
-LinkedIn : https://www.linkedin.com/in/ndeye-aissatou-gassama
+- [SunuConseil](https://sunuconseil.com) : site et outils internes d'une société de conseil IT basée à Dakar, dont elle est co-fondatrice
+- [SunuMenu](https://sunumenu.sunuconseil.com) : produit SaaS de menu digital par QR code pour la restauration
+
+## Sites de démonstration
+
+Important : les quatre sites ci-dessous sont des démonstrations techniques construites de toutes pièces pour illustrer l'offre. Les entreprises qu'ils présentent sont fictives. **Ce ne sont pas des références clients, aucun client réel n'est impliqué, et ils ne doivent jamais être présentés comme des travaux réalisés pour un commanditaire.**
+
+- [Démo restaurant](https://restaurant.oryel.dev) : menu interactif, réservation en ligne et assistant IA. Enseigne fictive.
+- [Démo boutique](https://boutique.oryel.dev) : catalogue produits et assistant IA jouant le rôle de conseiller. Enseigne fictive.
+- [Démo cabinet paramédical](https://cabinet.oryel.dev) : site éditorial avec assistant IA répondant aux questions courantes. Cabinet fictif.
+- [Démo gîte](https://gite.oryel.dev) : réservation directe avec assistant IA bilingue. Hébergement fictif.
+
+## Contact et présence en ligne
+
+- [Site officiel](https://oryel.dev/)
+- [Prendre rendez-vous (Calendly)](https://calendly.com/ndeye-aissatou-gassama-sn/30min)
+- [Profil Malt](https://www.malt.fr/profile/ndeyeaissatougassama)
+- [Profil LinkedIn](https://www.linkedin.com/in/ndeye-aissatou-gassama)
+- [GitHub](https://github.com/ayshagassama1)
+- [Mentions légales](https://oryel.dev/mentions-legales)
