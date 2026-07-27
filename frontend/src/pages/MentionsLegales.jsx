@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Head } from 'vite-react-ssg';
+import Seo from '../components/Seo';
 
 export default function MentionsLegales() {
   useEffect(() => {
@@ -10,10 +11,12 @@ export default function MentionsLegales() {
 
   return (
     <>
-      <Head>
-        <title>Mentions légales - Oryel</title>
-        <meta name="robots" content="noindex, follow" />
-      </Head>
+      <Seo
+        path="/mentions-legales"
+        title="Mentions légales | Oryel"
+        description="Mentions légales, hébergement et politique de confidentialité du site oryel.dev."
+        noindex
+      />
       <div className="min-h-screen bg-white font-inter">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
           <Link
