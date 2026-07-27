@@ -18,4 +18,7 @@ export default defineConfig({
       },
     },
   },
+  ssgOptions: {
+    includedRoutes: () => ['/', '/mentions-legales', '/404'],
+  },
 });
