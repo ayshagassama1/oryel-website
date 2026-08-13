@@ -53,7 +53,9 @@ export default function AboutSection() {
                 Je m'appelle <strong>N. Aissatou Gassama</strong>. Je suis développeur
                 fullstack freelance, basée à Metz. Diplômée d'un Master en Informatique,
                 j'ai travaillé sur des sujets de Machine Learning au LIMOS,
-                puis comme développeur backend au Luxembourg. En parallèle, j'ai cofondé&nbsp;
+                puis comme développeur backend chez Evo Agency, une agence de marketing
+                digital au Luxembourg, où je construisais des assistants IA avec l'API
+                OpenAI pour les outils internes de leurs clients. En parallèle, j'ai cofondé&nbsp;
                 <a
                   href="https://sunuconseil.com"
                   target="_blank"

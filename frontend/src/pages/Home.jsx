@@ -23,7 +23,7 @@ export default function Home() {
       <Seo
         path="/"
         title="Création de site internet et chatbot IA à Metz | Oryel"
-        description="Développeur freelance à Metz. Sites internet et assistants IA pour indépendants, commerces et hébergeurs en Moselle et Grand Est. Devis sous 48 h."
+        description="Développeur freelance à Metz. Sites internet et assistants IA pour indépendants, commerces et hébergeurs en Moselle, Grand Est et Luxembourg. Devis sous 48 h."
       />
 
       <div className="font-inter">

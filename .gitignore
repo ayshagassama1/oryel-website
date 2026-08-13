@@ -32,3 +32,6 @@ docker-compose.override.yml
 
 # Logs
 *.log
+
+PLAN_EXECUTION_SEO.md
+*.skill

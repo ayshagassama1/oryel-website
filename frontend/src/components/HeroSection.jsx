@@ -46,14 +46,14 @@ export default function HeroSection() {
           </div>
  
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
-            Dev fullstack freelance.{' '}
-            <span className="text-teal-600">Sites web, apps et IA</span>{' '}
-            sur mesure.
+            Sites internet et{' '}
+            <span className="text-teal-600">assistants IA</span>{' '}
+            pour les indépendants et commerces du Grand Est
           </h1>
  
           <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-            Je transforme vos idées en fonctionnalités concrètes, utilisables par vos équipes ou vos clients.
-            Applications web, automatisation, IA : chaque livraison a un impact direct sur votre activité.
+            Site internet, chatbot IA, automatisation : je développe ces outils moi-même,
+            du cahier des charges à la mise en ligne.
           </p>
  
           <div className="flex flex-wrap gap-4">
