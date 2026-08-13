@@ -54,19 +54,27 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <button
-          onClick={() => scrollTo('hero')}
+        <a
+          href="#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo('hero');
+          }}
           className="font-bold text-2xl tracking-tight text-gray-900"
         >
           Ory<span className="text-teal-600">el</span>
-        </button>
+        </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              onClick={() => scrollTo(item.id)}
+              href={`#${item.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo(item.id);
+              }}
               aria-current={activeSection === item.id ? 'true' : undefined}
               className={`text-base font-medium transition-colors ${
                 activeSection === item.id
@@ -75,7 +83,7 @@ export default function Navbar() {
               }`}
             >
               {item.label}
-            </button>
+            </a>
           ))}
           
           <a  href="https://calendly.com/ndeye-aissatou-gassama-sn/30min"
@@ -117,9 +125,13 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              onClick={() => scrollTo(item.id)}
+              href={`#${item.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo(item.id);
+              }}
               aria-current={activeSection === item.id ? 'true' : undefined}
               className={`text-left text-sm font-medium py-1 transition-colors ${
                 activeSection === item.id
@@ -128,7 +140,7 @@ export default function Navbar() {
               }`}
             >
               {item.label}
-            </button>
+            </a>
           ))}
           <a
             href="https://calendly.com/ndeye-aissatou-gassama-sn/30min"

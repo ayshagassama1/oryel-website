@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Linkedin, Github } from 'lucide-react';
 
-const scrollTo = (id) =>
+const scrollTo = (e, id) => {
+  e.preventDefault();
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+};
 
 const navLinks = [
   { label: 'Démos', id: 'demos' },
@@ -28,13 +30,14 @@ export default function Footer() {
 
           <div className="flex justify-center gap-6 flex-wrap">
             {navLinks.map((item) => (
-              <button
+              <a
                 key={item.id}
-                onClick={() => scrollTo(item.id)}
+                href={`#${item.id}`}
+                onClick={(e) => scrollTo(e, item.id)}
                 className="text-sm hover:text-teal-400 transition-colors"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
 

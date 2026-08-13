@@ -77,10 +77,12 @@ export default function ContactSection({ preselectedService = '' }) {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Nom
                   </label>
                   <input
+                    id="name"
+                    name="name"
                     type="text"
                     required
                     minLength={2}
@@ -91,10 +93,12 @@ export default function ContactSection({ preselectedService = '' }) {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Email
                   </label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
                     required
                     value={form.email}
@@ -106,10 +110,12 @@ export default function ContactSection({ preselectedService = '' }) {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Quel service vous intéresse ?
                   </label>
                   <select
+                    id="service"
+                    name="service"
                     value={form.service}
                     onChange={(e) =>
                       setForm({ ...form, service: e.target.value })
@@ -124,10 +130,12 @@ export default function ContactSection({ preselectedService = '' }) {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Message
                   </label>
                   <textarea
+                    id="message"
+                    name="message"
                     required
                     minLength={10}
                     value={form.message}
