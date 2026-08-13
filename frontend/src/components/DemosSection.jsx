@@ -15,13 +15,13 @@ const clientDemos = [
     bgColor: 'bg-orange-50',
   },
   {
-    title: 'Atelier Lumière',
+    title: 'Atelier Lumina',
     type: 'Boutique locale',
     description:
       "Catalogue produits et assistant IA qui joue le rôle de conseiller : il pose des questions, comprend ce que cherche le visiteur et l'oriente vers le bon produit.",
     url: 'https://boutique.oryel.dev',
     screenshot: '/screenshots/boutique.png',
-    screenshotAlt: "Page d'accueil de l'Atelier Lumière, bijouterie artisanale fictive",
+    screenshotAlt: "Page d'accueil de l'Atelier Lumina, bijouterie artisanale fictive",
     accentColor: 'text-violet-600',
     borderColor: 'border-violet-200',
     bgColor: 'bg-violet-50',
