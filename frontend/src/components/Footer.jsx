@@ -1,10 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Linkedin, Github } from 'lucide-react';
-
-const scrollTo = (e, id) => {
-  e.preventDefault();
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-};
 
 const navLinks = [
   { label: 'Démos', id: 'demos' },
@@ -13,9 +8,20 @@ const navLinks = [
   { label: 'Contact', id: 'contact' },
 ];
 
+const pageLinks = [{ label: 'Sophrologues', path: '/site-internet-sophrologue' }];
+
 export default function Footer() {
   const year = new Date().getFullYear();
- 
+  const isHome = useLocation().pathname === '/';
+
+  // Sur la home, les liens defilent vers la section. Ailleurs (pages qui ne
+  // contiennent pas ces ancres), on laisse le lien naviguer vers /#section.
+  const scrollTo = (e, id) => {
+    if (!isHome) return;
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-400">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
@@ -32,12 +38,21 @@ export default function Footer() {
             {navLinks.map((item) => (
               <a
                 key={item.id}
-                href={`#${item.id}`}
+                href={isHome ? `#${item.id}` : `/#${item.id}`}
                 onClick={(e) => scrollTo(e, item.id)}
                 className="text-sm hover:text-teal-400 transition-colors"
               >
                 {item.label}
               </a>
+            ))}
+            {pageLinks.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="text-sm hover:text-teal-400 transition-colors"
+              >
+                {item.label}
+              </Link>
             ))}
           </div>
 

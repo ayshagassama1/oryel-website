@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import CookieConsent from './components/CookieConsent';
 import Home from './pages/Home';
 import MentionsLegales from './pages/MentionsLegales';
+import SiteInternetSophrologue from './pages/SiteInternetSophrologue';
 import NotFound from './pages/NotFound';
 
 function RootLayout() {
@@ -20,6 +21,7 @@ export const routes = [
     children: [
       { index: true, element: <Home /> },
       { path: 'mentions-legales', element: <MentionsLegales /> },
+      { path: 'site-internet-sophrologue', element: <SiteInternetSophrologue /> },
 
       { path: '404', element: <NotFound /> },
 

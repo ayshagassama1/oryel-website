@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const navItems = [
   { label: 'Démos', id: 'demos' },
@@ -11,6 +12,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -19,8 +22,12 @@ export default function Navbar() {
   }, []);
 
   // Scrollspy : la section active est celle qui traverse une bande
-  // située dans le tiers haut de l'écran.
+  // située dans le tiers haut de l'écran. N'a de sens que sur la home,
+  // les autres pages peuvent reutiliser un composant qui partage le meme
+  // id (ex. ContactSection) sans que ce soit la meme section de nav.
   useEffect(() => {
+    if (!isHome) return;
+
     const sections = navItems
       .map((item) => document.getElementById(item.id))
       .filter(Boolean);
@@ -38,12 +45,20 @@ export default function Navbar() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [isHome]);
 
-  const scrollTo = (id) => {
+  // Sur la home, les liens defilent vers la section. Sur les autres pages
+  // (qui ne contiennent pas ces ancres), on laisse le lien naviguer
+  // normalement vers /#section : le navigateur gere le saut d'ancre une
+  // fois la home chargee.
+  const handleNavClick = (e, id) => {
+    if (!isHome) return;
+    e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
   };
+
+  const hrefFor = (id) => (isHome ? `#${id}` : `/#${id}`);
 
   return (
     <nav
@@ -55,11 +70,8 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a
-          href="#hero"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollTo('hero');
-          }}
+          href={hrefFor('hero')}
+          onClick={(e) => handleNavClick(e, 'hero')}
           className="font-bold text-2xl tracking-tight text-gray-900"
         >
           Ory<span className="text-teal-600">el</span>
@@ -70,11 +82,8 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo(item.id);
-              }}
+              href={hrefFor(item.id)}
+              onClick={(e) => handleNavClick(e, item.id)}
               aria-current={activeSection === item.id ? 'true' : undefined}
               className={`text-base font-medium transition-colors ${
                 activeSection === item.id
@@ -85,7 +94,7 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-          
+
           <a  href="https://calendly.com/ndeye-aissatou-gassama-sn/30min"
             target="_blank"
             rel="noopener noreferrer"
@@ -127,11 +136,8 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo(item.id);
-              }}
+              href={hrefFor(item.id)}
+              onClick={(e) => handleNavClick(e, item.id)}
               aria-current={activeSection === item.id ? 'true' : undefined}
               className={`text-left text-sm font-medium py-1 transition-colors ${
                 activeSection === item.id
