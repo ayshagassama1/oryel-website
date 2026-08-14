@@ -68,7 +68,7 @@ export default function SiteInternetSophrologue() {
     <>
       <Seo
         path="/site-internet-sophrologue"
-        title="Site internet pour sophrologue à Metz | Oryel"
+        title="Site internet pour sophrologue à Metz | Oryel dev"
         description="Un site avec assistant IA qui répond aux questions de vos futurs clients, même en séance ou le soir. Livraison en général en 2 à 3 semaines."
       />
 

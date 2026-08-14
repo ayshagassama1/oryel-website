@@ -64,7 +64,7 @@ export default function Tarifs() {
     <>
       <Seo
         path="/tarifs"
-        title="Tarifs d'un site internet freelance | Oryel"
+        title="Tarifs d'un site internet freelance | Oryel dev"
         description="Trois formules claires : vitrine, vitrine avec assistant IA, ou sur mesure. Prix, délais et contenu inclus, sans surprise. Devis gratuit sous 48h."
       />
 

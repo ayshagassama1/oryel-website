@@ -107,7 +107,7 @@ export default function CreationSiteInternetMetz() {
     <>
       <Seo
         path="/creation-site-internet-metz"
-        title="Création de site internet à Metz | Oryel"
+        title="Création de site internet à Metz | Oryel dev"
         description="Développeur freelance basé à Metz. Sites internet et assistants IA pour indépendants et commerces de Moselle et du Grand Est. Devis sous 48h."
       />
 

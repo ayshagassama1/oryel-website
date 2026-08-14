@@ -35,9 +35,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center mb-8">
           <div>
             <div className="font-bold text-lg text-white mb-1">
-              Ory<span className="text-teal-400">el</span>
+              Ory<span className="text-teal-400">el</span> dev
             </div>
-            <p className="text-sm">© {year} Oryel, N. Aissatou Gassama</p>
+            <p className="text-sm">© {year} Oryel dev, Ndeye Aissatou Gassama</p>
             <p className="text-sm">Dev Fullstack & IA</p>
           </div>
 

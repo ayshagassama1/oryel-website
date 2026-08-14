@@ -64,7 +64,7 @@ export default function SiteInternetGiteChambreHotes() {
     <>
       <Seo
         path="/site-internet-gite-chambre-hotes"
-        title="Site internet pour gîte et chambre d'hôtes dans le Grand Est | Oryel"
+        title="Site internet pour gîte et chambre d'hôtes dans le Grand Est | Oryel dev"
         description="Un site avec assistant multilingue qui répond à vos voyageurs à toute heure et les oriente vers la réservation directe, sans commission Booking."
       />
 

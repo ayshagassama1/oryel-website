@@ -7,7 +7,7 @@ export default function NotFound() {
     <>
       <Seo
         path="/404"
-        title="Page introuvable | Oryel"
+        title="Page introuvable | Oryel dev"
         description="Cette page n'existe pas ou a été déplacée."
         noindex
       />

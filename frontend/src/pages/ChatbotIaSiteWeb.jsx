@@ -78,7 +78,7 @@ export default function ChatbotIaSiteWeb() {
     <>
       <Seo
         path="/chatbot-ia-site-web"
-        title="Chatbot IA pour site web : prix et installation | Oryel"
+        title="Chatbot IA pour site web : prix et installation | Oryel dev"
         description="Ajoutez un assistant IA à votre site actuel ou dans une nouvelle vitrine. Répond uniquement à partir de vos informations, jamais de réponse inventée. Devis sous 48h."
       />
 

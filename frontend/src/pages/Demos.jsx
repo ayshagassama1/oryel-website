@@ -107,7 +107,7 @@ export default function Demos() {
     <>
       <Seo
         path="/demos"
-        title="Démos de sites internet avec assistant IA | Oryel"
+        title="Démos de sites internet avec assistant IA | Oryel dev"
         description="Quatre sites de démonstration fonctionnels, chacun avec son assistant IA. Entreprises fictives, principes réels : testez-les directement."
       />
 

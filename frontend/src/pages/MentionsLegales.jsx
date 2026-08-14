@@ -13,7 +13,7 @@ export default function MentionsLegales() {
     <>
       <Seo
         path="/mentions-legales"
-        title="Mentions légales | Oryel"
+        title="Mentions légales | Oryel dev"
         description="Mentions légales, hébergement et politique de confidentialité du site oryel.dev."
         noindex
       />
@@ -95,7 +95,7 @@ export default function MentionsLegales() {
                 <h3 className="font-medium text-gray-700 mb-1">Chatbot</h3>
                 <p>
                   Le chatbot intégré au site est alimenté par l'API Groq. Les messages saisis dans le chatbot
-                  sont transmis à Groq pour générer une réponse et ne sont pas conservés par Oryel.
+                  sont transmis à Groq pour générer une réponse et ne sont pas conservés par Oryel dev.
                 </p>
               </div>
               <div>
@@ -177,7 +177,7 @@ export default function MentionsLegales() {
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed">
               L'ensemble du contenu de ce site (textes, code source, design) est la propriété exclusive
-              d'Oryel - Ndeye Aissatou Gassama, sauf mentions contraires. Toute reproduction, même partielle,
+              d'Oryel dev - Ndeye Aissatou Gassama, sauf mentions contraires. Toute reproduction, même partielle,
               est interdite sans autorisation préalable.
             </p>
           </section>
@@ -187,9 +187,9 @@ export default function MentionsLegales() {
               Limitation de responsabilité
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Oryel s'efforce de maintenir des informations à jour mais ne peut garantir l'exactitude,
+              Oryel dev s'efforce de maintenir des informations à jour mais ne peut garantir l'exactitude,
               l'exhaustivité ou l'actualité des informations diffusées sur ce site. Les liens vers des
-              sites tiers sont fournis à titre informatif ; Oryel n'est pas responsable de leur contenu.
+              sites tiers sont fournis à titre informatif ; Oryel dev n'est pas responsable de leur contenu.
             </p>
           </section>
         </div>

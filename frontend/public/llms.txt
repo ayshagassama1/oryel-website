@@ -2,7 +2,7 @@
 
 > Oryel dev est la marque de Ndeye Aissatou Gassama, développeur fullstack et IA en freelance, basée à Metz (Moselle, Grand Est, France). Conception de sites internet, d'applications web et d'assistants conversationnels IA pour indépendants, commerces et petites entreprises.
 
-À ne pas confondre avec les autres entités portant le nom « Oryel » (artiste musical, marques de vêtements, comptes de réseaux sociaux homonymes). Oryel désigne ici une activité de développement web et d'intégration IA enregistrée en France sous le SIREN 982 878 449.
+À ne pas confondre avec les autres entités portant le nom « Oryel » (artiste musical, marques de vêtements, comptes de réseaux sociaux homonymes). Oryel dev désigne ici une activité de développement web et d'intégration IA enregistrée en France sous le SIREN 982 878 449.
 
 - Contact : contact@oryel.dev
 - Zone d'intervention : Metz, Thionville, Nancy, Moselle, Grand Est, Luxembourg, et à distance partout en France

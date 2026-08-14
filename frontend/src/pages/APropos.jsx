@@ -68,7 +68,7 @@ export default function APropos() {
     <>
       <Seo
         path="/a-propos"
-        title="À propos | Oryel"
+        title="À propos | Oryel dev"
         description="Développeur fullstack et IA freelance à Metz. Master Data Science, certifiée AWS, expérience en France, au Luxembourg et au Sénégal."
       />
 
@@ -121,7 +121,7 @@ export default function APropos() {
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed mb-5">
                     Aujourd'hui, je travaille sous le nom{' '}
-                    <strong className="text-teal-600">Oryel</strong>. Je conçois et développe
+                    <strong className="text-teal-600">Oryel dev</strong>. Je conçois et développe
                     des applications web complètes, du backend au déploiement, et j'intègre
                     des fonctionnalités d'intelligence artificielle directement utiles.
                     Concrètement : des chatbots qui répondent, de l'automatisation qui fait

@@ -82,7 +82,7 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, 'hero')}
           className="font-bold text-2xl tracking-tight text-gray-900"
         >
-          Ory<span className="text-teal-600">el</span>
+          Ory<span className="text-teal-600">el</span> dev
         </a>
 
         {/* Desktop nav */}
