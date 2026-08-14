@@ -25,7 +25,7 @@ const faqItems = [
   },
   {
     question: 'Combien de temps pour avoir mon site en ligne ?',
-    answer: 'En général en moins de deux semaines, du premier échange à la mise en ligne.',
+    answer: "En général en 2 à 3 semaines pour un site complet avec l'assistant, plus rapide pour un ajout seul à un site existant.",
   },
   {
     question: "J'ai déjà un site, dois-je tout refaire ?",
@@ -69,7 +69,7 @@ export default function SiteInternetSophrologue() {
       <Seo
         path="/site-internet-sophrologue"
         title="Site internet pour sophrologue à Metz | Oryel"
-        description="Un site avec assistant IA qui répond aux questions de vos futurs clients, même en séance ou le soir. Livraison en général sous deux semaines."
+        description="Un site avec assistant IA qui répond aux questions de vos futurs clients, même en séance ou le soir. Livraison en général en 2 à 3 semaines."
       />
 
       <Head>
@@ -175,11 +175,11 @@ export default function SiteInternetSophrologue() {
               Souffler un peu, pas seulement gagner du temps
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              L'objectif n'est pas de grappiller quelques minutes sur un planning. C'est de ne plus
-              être interrompue en pleine séance par une question qui aurait pu attendre, de ne plus
-              rédiger la même réponse par email à vingt-deux heures, et de pouvoir accueillir la
-              personne en face de vous sans avoir la tête ailleurs. Ce que le site absorbe en
-              amont, c'est du temps que vous ne passez plus à répéter les mêmes informations.
+              L'objectif dépasse le simple gain de minutes sur un planning. Il s'agit de rester
+              disponible pendant une séance, d'accueillir la personne en face de vous avec toute
+              votre attention, et de retrouver le lendemain matin les questions du soir déjà
+              traitées. Le site absorbe en amont ce qui, autrement, reviendrait se répéter à
+              chaque échange.
             </p>
           </div>
         </section>
@@ -204,7 +204,7 @@ export default function SiteInternetSophrologue() {
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Livraison rapide</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  En général en moins de deux semaines, du premier échange à la mise en ligne.
+                  En général en 2 à 3 semaines pour un site complet avec l'assistant, plus rapide pour un ajout seul à un site existant.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">

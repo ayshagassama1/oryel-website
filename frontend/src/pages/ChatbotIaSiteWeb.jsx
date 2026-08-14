@@ -42,7 +42,7 @@ const faqItems = [
   {
     question: 'Combien de temps pour le mettre en ligne ?',
     answer:
-      "En général en moins de deux semaines pour un site complet, plus rapide pour un ajout seul à un site existant.",
+      "En général en 2 à 3 semaines pour un site complet avec l'assistant, plus rapide pour un ajout seul à un site existant.",
   },
   {
     question: 'Le chatbot peut-il directement réserver un créneau à ma place ?',

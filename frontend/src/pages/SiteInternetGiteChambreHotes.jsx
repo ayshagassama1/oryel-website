@@ -25,7 +25,7 @@ const faqItems = [
   },
   {
     question: 'Combien de temps pour avoir mon site en ligne ?',
-    answer: 'En général en moins de deux semaines, du premier échange à la mise en ligne.',
+    answer: "En général en 2 à 3 semaines pour un site complet avec l'assistant, plus rapide pour un ajout seul à un site existant.",
   },
   {
     question: "J'ai déjà un site, dois-je tout refaire ?",
@@ -226,7 +226,7 @@ export default function SiteInternetGiteChambreHotes() {
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Livraison rapide</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  En général en moins de deux semaines, du premier échange à la mise en ligne.
+                  En général en 2 à 3 semaines pour un site complet avec l'assistant, plus rapide pour un ajout seul à un site existant.
                 </p>
               </div>
             </div>
