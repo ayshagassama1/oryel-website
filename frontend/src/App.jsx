@@ -6,6 +6,9 @@ import SiteInternetSophrologue from './pages/SiteInternetSophrologue';
 import SiteInternetGiteChambreHotes from './pages/SiteInternetGiteChambreHotes';
 import ChatbotIaSiteWeb from './pages/ChatbotIaSiteWeb';
 import CreationSiteInternetMetz from './pages/CreationSiteInternetMetz';
+import Tarifs from './pages/Tarifs';
+import Demos from './pages/Demos';
+import APropos from './pages/APropos';
 import NotFound from './pages/NotFound';
 
 function RootLayout() {
@@ -28,6 +31,9 @@ export const routes = [
       { path: 'site-internet-gite-chambre-hotes', element: <SiteInternetGiteChambreHotes /> },
       { path: 'chatbot-ia-site-web', element: <ChatbotIaSiteWeb /> },
       { path: 'creation-site-internet-metz', element: <CreationSiteInternetMetz /> },
+      { path: 'tarifs', element: <Tarifs /> },
+      { path: 'demos', element: <Demos /> },
+      { path: 'a-propos', element: <APropos /> },
 
       { path: '404', element: <NotFound /> },
 

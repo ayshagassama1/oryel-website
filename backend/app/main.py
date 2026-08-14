@@ -8,7 +8,7 @@ settings = get_settings()
 
 app = FastAPI(
     title="Portfolio Oryel API",
-    description="API backend du portfolio d'Aissatou Gassama / Oryel",
+    description="API backend du portfolio de Ndeye Aissatou Gassama / Oryel",
     version="0.1.0",
     docs_url=None,
     redoc_url=None,

@@ -4,7 +4,6 @@ import { Linkedin, Github } from 'lucide-react';
 const navLinks = [
   { label: 'Démos', id: 'demos' },
   { label: 'Services', id: 'services' },
-  { label: 'À propos', id: 'apropos' },
   { label: 'Contact', id: 'contact' },
 ];
 
@@ -13,6 +12,9 @@ const pageLinks = [
   { label: 'Gîtes & chambres d\'hôtes', path: '/site-internet-gite-chambre-hotes' },
   { label: 'Chatbot IA', path: '/chatbot-ia-site-web' },
   { label: 'Metz', path: '/creation-site-internet-metz' },
+  { label: 'Tarifs', path: '/tarifs' },
+  { label: 'Toutes les démos', path: '/demos' },
+  { label: 'À propos', path: '/a-propos' },
 ];
 
 export default function Footer() {

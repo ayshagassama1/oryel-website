@@ -1,7 +1,7 @@
 # CV - Aissatou Gassama
 
 ## Identité
-- Nom : Aissatou Gassama
+- Nom : Ndeye Aissatou Gassama
 - Localisation : Metz 57000, France
 - Ouverte à la mobilité (remote ou hybride)
 - Email : ndeye.aissatou.gassama.sn@gmail.com

@@ -4,7 +4,7 @@ import { useScrollAnimate } from '../hooks/useScrollAnimate';
 const scrollTo = (id) =>
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
-const tiers = [
+export const tiers = [
   {
     icon: Globe,
     title: 'Vitrine Moderne',

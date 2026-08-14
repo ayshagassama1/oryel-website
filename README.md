@@ -52,7 +52,7 @@ npm run dev
 
 ## Auteure
 
-**Aissatou Gassama** - Développeuse Fullstack Python/React & Intégration IA  
+**Ndeye Aissatou Gassama** - Développeuse Fullstack Python/React & Intégration IA  
 [LinkedIn](https://linkedin.com/in/ndeye-aissatou-gassama) · [Malt](https://www.malt.fr/profile/ndeyeaissatougassama)
 
 ---

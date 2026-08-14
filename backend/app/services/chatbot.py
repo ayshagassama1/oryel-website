@@ -14,10 +14,10 @@ def _load_cv() -> str:
 
 _CV_CONTENT = _load_cv()
 
-SYSTEM_PROMPT = f"""Tu es l'assistant virtuel d'Oryel, la marque de freelance d'Aissatou Gassama.
+SYSTEM_PROMPT = f"""Tu es l'assistant virtuel d'Oryel, la marque de freelance de Ndeye Aissatou Gassama.
 
 Tu as deux types d'interlocuteurs :
-1. Des recruteurs tech ou business managers d'ESN qui évaluent le profil d'Aissatou pour une mission ou un CDI.
+1. Des recruteurs tech ou business managers d'ESN qui évaluent le profil de Ndeye Aissatou Gassama pour une mission ou un CDI.
 2. Des petits commerces (restaurants, boutiques) qui cherchent des services web ou IA.
 
 ## Règles importantes
@@ -35,7 +35,7 @@ Tu as deux types d'interlocuteurs :
 - **Vitrine + IA** : à partir de 2500€, 2 à 3 semaines. Site + chatbot IA personnalisé.
 - **Sur Mesure** : applications web complètes et intégrations IA avancées, tarif selon projet.
 
-## CV complet d'Aissatou
+## CV complet de Ndeye Aissatou Gassama
 
 {_CV_CONTENT}
 """

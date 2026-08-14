@@ -177,7 +177,7 @@ export default function MentionsLegales() {
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed">
               L'ensemble du contenu de ce site (textes, code source, design) est la propriété exclusive
-              d'Oryel - Aissatou Gassama, sauf mentions contraires. Toute reproduction, même partielle,
+              d'Oryel - Ndeye Aissatou Gassama, sauf mentions contraires. Toute reproduction, même partielle,
               est interdite sans autorisation préalable.
             </p>
           </section>

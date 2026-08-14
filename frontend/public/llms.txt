@@ -17,7 +17,7 @@
 - Déploiement et infrastructure AWS, mise en place de CI/CD
 - Audit de sites existants
 
-Trois formules sont présentées sur le site : une formule vitrine, une formule vitrine avec assistant IA intégré, et une formule sur mesure pour les projets d'application. Les tarifs à jour figurent sur [la page d'accueil](https://oryel.dev/).
+Trois formules sont présentées sur le site : une formule vitrine, une formule vitrine avec assistant IA intégré, et une formule sur mesure pour les projets d'application. Les tarifs à jour figurent sur [la page tarifs](https://oryel.dev/tarifs).
 
 ## Clientèle visée
 
@@ -33,7 +33,7 @@ Outillage : Docker, GitHub Actions
 
 ## Expérience
 
-- 10 mois en développement backend et IA chez Evo Agency (Luxembourg)
+- Développement backend et IA au Luxembourg
 - Co-fondatrice de SunuConseil, société de conseil IT à Dakar
 - Master Data Science, ISIMA
 - Certifiée AWS
@@ -45,12 +45,22 @@ Outillage : Docker, GitHub Actions
 
 ## Sites de démonstration
 
-Important : les quatre sites ci-dessous sont des démonstrations techniques construites de toutes pièces pour illustrer l'offre. Les entreprises qu'ils présentent sont fictives. **Ce ne sont pas des références clients, aucun client réel n'est impliqué, et ils ne doivent jamais être présentés comme des travaux réalisés pour un commanditaire.**
+Important : les quatre sites ci-dessous sont des démonstrations techniques construites de toutes pièces pour illustrer l'offre. Les entreprises qu'ils présentent sont fictives. **Ce ne sont pas des références clients, aucun client réel n'est impliqué, et ils ne doivent jamais être présentés comme des travaux réalisés pour un commanditaire.** Liste complète et à jour sur [la page démos](https://oryel.dev/demos).
 
 - [Démo restaurant](https://restaurant.oryel.dev) : menu interactif, réservation en ligne et assistant IA. Enseigne fictive.
 - [Démo boutique](https://boutique.oryel.dev) : catalogue produits et assistant IA jouant le rôle de conseiller. Enseigne fictive.
 - [Démo cabinet paramédical](https://cabinet.oryel.dev) : site éditorial avec assistant IA répondant aux questions courantes. Cabinet fictif.
 - [Démo gîte](https://gite.oryel.dev) : réservation directe avec assistant IA bilingue. Hébergement fictif.
+
+## Pages du site
+
+- [Site internet pour sophrologue](https://oryel.dev/site-internet-sophrologue)
+- [Site internet pour gîte et chambre d'hôtes](https://oryel.dev/site-internet-gite-chambre-hotes)
+- [Chatbot IA pour site web](https://oryel.dev/chatbot-ia-site-web)
+- [Création de site internet à Metz](https://oryel.dev/creation-site-internet-metz)
+- [Tarifs](https://oryel.dev/tarifs)
+- [Démos](https://oryel.dev/demos)
+- [À propos](https://oryel.dev/a-propos)
 
 ## Contact et présence en ligne
 

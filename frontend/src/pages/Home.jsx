@@ -5,7 +5,6 @@ import HeroSection from '../components/HeroSection';
 import DemosSection from '../components/DemosSection';
 import ProcessSection from '../components/ProcessSection';
 import ServicesSection from '../components/ServicesSection';
-import AboutSection from '../components/AboutSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
@@ -32,7 +31,6 @@ export default function Home() {
         <DemosSection onWantSameSite={handleWantSameSite} />
         <ProcessSection />
         <ServicesSection onWantSameSite={handleWantSameSite} />
-        <AboutSection />
         <ContactSection preselectedService={preselectedService} />
         <Footer />
         <ChatBot />

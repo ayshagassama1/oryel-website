@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+// Items avec `id` : section de la home, defilement en douceur.
+// Items avec `path` : page dediee, lien normal, pas de scrollspy.
 const navItems = [
   { label: 'Démos', id: 'demos' },
   { label: 'Services', id: 'services' },
-  { label: 'À propos', id: 'apropos' },
+  { label: 'À propos', path: '/a-propos' },
   { label: 'Contact', id: 'contact' },
 ];
 
@@ -23,12 +25,13 @@ export default function Navbar() {
 
   // Scrollspy : la section active est celle qui traverse une bande
   // située dans le tiers haut de l'écran. N'a de sens que sur la home,
-  // les autres pages peuvent reutiliser un composant qui partage le meme
-  // id (ex. ContactSection) sans que ce soit la meme section de nav.
+  // et seulement pour les items ancrés a une section (id), pas pour les
+  // items qui pointent vers une page dediee (path).
   useEffect(() => {
     if (!isHome) return;
 
     const sections = navItems
+      .filter((item) => item.id)
       .map((item) => document.getElementById(item.id))
       .filter(Boolean);
 
@@ -47,8 +50,8 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [isHome]);
 
-  // Sur la home, les liens defilent vers la section. Sur les autres pages
-  // (qui ne contiennent pas ces ancres), on laisse le lien naviguer
+  // Sur la home, les liens ancres defilent vers la section. Sur les autres
+  // pages (qui ne contiennent pas ces ancres), on laisse le lien naviguer
   // normalement vers /#section : le navigateur gere le saut d'ancre une
   // fois la home chargee.
   const handleNavClick = (e, id) => {
@@ -58,7 +61,12 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
-  const hrefFor = (id) => (isHome ? `#${id}` : `/#${id}`);
+  const hrefFor = (item) => {
+    if (item.path) return item.path;
+    return isHome ? `#${item.id}` : `/#${item.id}`;
+  };
+
+  const isActive = (item) => (item.path ? location.pathname === item.path : activeSection === item.id);
 
   return (
     <nav
@@ -70,7 +78,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a
-          href={hrefFor('hero')}
+          href={isHome ? '#hero' : '/'}
           onClick={(e) => handleNavClick(e, 'hero')}
           className="font-bold text-2xl tracking-tight text-gray-900"
         >
@@ -81,14 +89,12 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item.id}
-              href={hrefFor(item.id)}
-              onClick={(e) => handleNavClick(e, item.id)}
-              aria-current={activeSection === item.id ? 'true' : undefined}
+              key={item.id || item.path}
+              href={hrefFor(item)}
+              onClick={item.id ? (e) => handleNavClick(e, item.id) : undefined}
+              aria-current={isActive(item) ? 'true' : undefined}
               className={`text-base font-medium transition-colors ${
-                activeSection === item.id
-                  ? 'text-teal-600'
-                  : 'text-gray-600 hover:text-teal-600'
+                isActive(item) ? 'text-teal-600' : 'text-gray-600 hover:text-teal-600'
               }`}
             >
               {item.label}
@@ -135,14 +141,12 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4">
           {navItems.map((item) => (
             <a
-              key={item.id}
-              href={hrefFor(item.id)}
-              onClick={(e) => handleNavClick(e, item.id)}
-              aria-current={activeSection === item.id ? 'true' : undefined}
+              key={item.id || item.path}
+              href={hrefFor(item)}
+              onClick={item.id ? (e) => handleNavClick(e, item.id) : undefined}
+              aria-current={isActive(item) ? 'true' : undefined}
               className={`text-left text-sm font-medium py-1 transition-colors ${
-                activeSection === item.id
-                  ? 'text-teal-600'
-                  : 'text-gray-700 hover:text-teal-600'
+                isActive(item) ? 'text-teal-600' : 'text-gray-700 hover:text-teal-600'
               }`}
             >
               {item.label}
