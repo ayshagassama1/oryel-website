@@ -8,7 +8,10 @@ const navLinks = [
   { label: 'Contact', id: 'contact' },
 ];
 
-const pageLinks = [{ label: 'Sophrologues', path: '/site-internet-sophrologue' }];
+const pageLinks = [
+  { label: 'Sophrologues', path: '/site-internet-sophrologue' },
+  { label: 'Gîtes & chambres d\'hôtes', path: '/site-internet-gite-chambre-hotes' },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
