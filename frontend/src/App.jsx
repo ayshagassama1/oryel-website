@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import MentionsLegales from './pages/MentionsLegales';
 import SiteInternetSophrologue from './pages/SiteInternetSophrologue';
 import SiteInternetGiteChambreHotes from './pages/SiteInternetGiteChambreHotes';
+import ChatbotIaSiteWeb from './pages/ChatbotIaSiteWeb';
 import NotFound from './pages/NotFound';
 
 function RootLayout() {
@@ -24,6 +25,7 @@ export const routes = [
       { path: 'mentions-legales', element: <MentionsLegales /> },
       { path: 'site-internet-sophrologue', element: <SiteInternetSophrologue /> },
       { path: 'site-internet-gite-chambre-hotes', element: <SiteInternetGiteChambreHotes /> },
+      { path: 'chatbot-ia-site-web', element: <ChatbotIaSiteWeb /> },
 
       { path: '404', element: <NotFound /> },
 

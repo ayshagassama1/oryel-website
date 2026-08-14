@@ -31,7 +31,7 @@ const tiers = [
       'Tout ce qui est dans la Vitrine Moderne',
       'Chatbot IA entraîné sur vos données (menu, horaires, services, FAQ)',
       'Répond à vos clients 24h/24',
-      'Prise de réservation automatique',
+      'Oriente vers la réservation ou la prise de rendez-vous',
       'Formation pour mettre à jour le chatbot vous-même',
     ],
     cta: 'Je veux ça pour mon commerce',

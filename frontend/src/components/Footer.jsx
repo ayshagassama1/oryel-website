@@ -11,6 +11,7 @@ const navLinks = [
 const pageLinks = [
   { label: 'Sophrologues', path: '/site-internet-sophrologue' },
   { label: 'Gîtes & chambres d\'hôtes', path: '/site-internet-gite-chambre-hotes' },
+  { label: 'Chatbot IA', path: '/chatbot-ia-site-web' },
 ];
 
 export default function Footer() {
