@@ -1,4 +1,5 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import CookieConsent from './components/CookieConsent';
 import Home from './pages/Home';
 import MentionsLegales from './pages/MentionsLegales';
@@ -12,9 +13,26 @@ import Demos from './pages/Demos';
 import APropos from './pages/APropos';
 import NotFound from './pages/NotFound';
 
+// React Router garde la position de defilement d'une page a l'autre lors
+// d'une navigation cote client (Link). Sans ca, cliquer un lien du footer
+// depuis le bas d'une page atterrit au meme scroll sur la page suivante.
+// On ignore les URL avec ancre (#section) pour laisser le navigateur gerer
+// le saut vers la section.
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) return;
+    window.scrollTo(0, 0);
+  }, [location.pathname, location.hash]);
+
+  return null;
+}
+
 function RootLayout() {
   return (
     <>
+      <ScrollToTop />
       <CookieConsent />
       <Outlet />
     </>

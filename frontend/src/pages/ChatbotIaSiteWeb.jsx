@@ -172,7 +172,8 @@ export default function ChatbotIaSiteWeb() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Le modèle d'IA se choisit selon le projet : ce site utilise Groq (llama-3.3-70b-versatile)
               pour sa rapidité de réponse, mais un autre modèle peut être retenu selon vos besoins.
-              Le tout est hébergé sur AWS. Ce sont des détails que vos visiteurs ne voient jamais,
+              L'hébergement suit la même logique : ce site tourne sur AWS, un autre hébergeur peut
+              être retenu selon le projet. Ce sont des détails que vos visiteurs ne voient jamais,
               mais qui expliquent pourquoi l'assistant répond en une ou deux secondes plutôt qu'en
               dix.
             </p>

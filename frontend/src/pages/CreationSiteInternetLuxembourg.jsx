@@ -49,7 +49,7 @@ const faqItems = [
   },
   {
     question: 'Où sont hébergées les données de mon site ?',
-    answer: "Sur AWS, région Paris (eu-west-3). Les données restent dans l'Union européenne.",
+    answer: "Ce site tourne sur AWS, région Paris. Pour un projet client, l'hébergeur peut s'adapter selon vos préférences, y compris pour rester dans l'UE si c'est important pour vous.",
   },
 ];
 
@@ -207,11 +207,12 @@ export default function CreationSiteInternetLuxembourg() {
 
         <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
           <div ref={dataRef} className="scroll-animate max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Données hébergées en Europe</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Hébergement en Europe</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Le site et l'assistant sont hébergés sur AWS, région Paris (eu-west-3). Les données
-              de vos visiteurs et de vos clients restent dans l'Union européenne, sans transfert
-              vers un serveur hors UE à gérer de votre côté.
+              Ce site tourne sur AWS, région Paris (eu-west-3), avec les données dans l'Union
+              européenne. Ce n'est pas un choix figé : pour un projet client, l'hébergeur peut
+              s'adapter selon vos préférences, y compris pour rester dans l'UE si c'est un critère
+              important pour vous.
             </p>
           </div>
         </section>
