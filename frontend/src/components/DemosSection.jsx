@@ -8,7 +8,7 @@ const clientDemos = [
     description:
       "Menu interactif, réservation en ligne et chatbot intégré. Pendant le service, quand le téléphone sonne et que personne ne peut décrocher, le site prend le relais.",
     url: 'https://restaurant.oryel.dev',
-    screenshot: '/screenshots/restaurant.png',
+    screenshot: '/screenshots/restaurant.webp',
     screenshotAlt: "Page d'accueil du Botaniste, restaurant fictif à Metz",
     accentColor: 'text-orange-600',
     borderColor: 'border-orange-200',
@@ -20,7 +20,7 @@ const clientDemos = [
     description:
       "Catalogue produits et assistant IA qui joue le rôle de conseiller : il pose des questions, comprend ce que cherche le visiteur et l'oriente vers le bon produit.",
     url: 'https://boutique.oryel.dev',
-    screenshot: '/screenshots/boutique.png',
+    screenshot: '/screenshots/boutique.webp',
     screenshotAlt: "Page d'accueil de l'Atelier Lumina, bijouterie artisanale fictive",
     accentColor: 'text-violet-600',
     borderColor: 'border-violet-200',
@@ -32,7 +32,7 @@ const clientDemos = [
     description:
       "Site éditorial pour un cabinet de kinésithérapie. L'assistant IA répond aux questions courantes (tarifs, soins, prise de rendez-vous) sans jamais substituer l'avis de la praticienne.",
     url: 'https://cabinet.oryel.dev',
-    screenshot: '/screenshots/cabinet.png',
+    screenshot: '/screenshots/cabinet.webp',
     screenshotAlt: "Page d'accueil du Cabinet Équilibre, cabinet de kinésithérapie fictif",
     accentColor: 'text-teal-600',
     borderColor: 'border-teal-200',
@@ -44,7 +44,7 @@ const clientDemos = [
     description:
       "Site de réservation directe pour un gîte, avec assistant IA multilingue. Il répond aux questions des voyageurs avant la réservation, à toute heure, sans remplacer l'accueil du propriétaire.",
     url: 'https://gite.oryel.dev',
-    screenshot: '/screenshots/gite.png',
+    screenshot: '/screenshots/gite.webp',
     screenshotAlt: "Page d'accueil du Clos des Mirabelles, gîte fictif",
     accentColor: 'text-rose-600',
     borderColor: 'border-rose-200',
@@ -61,7 +61,7 @@ const otherProjects = [
       "Vitrine et back-office d'un cabinet de conseil IT fondé à Dakar. Authentification, dashboard admin, gestion de blog et d'équipe. ",
     stack: ['Laravel', 'Vue.js', 'MySQL', 'AWS', 'EC2'],  
     url: 'https://sunuconseil.com',
-    screenshot: '/screenshots/sunuconseil.png',
+    screenshot: '/screenshots/sunuconseil.webp',
     screenshotAlt: "Page d'accueil de SunuConseil, cabinet de conseil IT à Dakar",
     accentColor: 'text-orange-600',
     borderColor: 'border-orange-200',
@@ -75,7 +75,7 @@ const otherProjects = [
       "Digitalise la carte d'un restaurant en quelques heures : un QR code par table, les plats en photos sur le téléphone du client, un dashboard pour tout gérer. V1 live, commande et paiement en cours de développement.",
     stack: ['React', 'FastAPI', 'AWS Lambda', 'PostgreSQL'],
       url: 'https://sunumenu.sunuconseil.com',
-    screenshot: '/screenshots/sunumenu.png',
+    screenshot: '/screenshots/sunumenu.webp',
     screenshotAlt: "Interface de SunuMenu, menu digital par QR code pour restaurants",
     accentColor: 'text-teal-600',
     borderColor: 'border-teal-200',
@@ -106,6 +106,8 @@ function ClientDemoCard({ demo, animRef }) {
           <img
             src={demo.screenshot}
             alt={demo.screenshotAlt}
+            width="2880"
+            height="1800"
             loading="lazy"
             className="w-full aspect-[16/10] object-cover object-top"
           />
@@ -153,6 +155,8 @@ function OtherProjectCard({ project, animRef }) {
         <img
           src={project.screenshot}
           alt={project.screenshotAlt}
+          width="2880"
+          height="1800"
           loading="lazy"
           className="w-full aspect-[16/10] object-cover object-top"
         />

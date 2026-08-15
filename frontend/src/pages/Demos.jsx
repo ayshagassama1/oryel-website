@@ -12,7 +12,7 @@ const demos = [
     title: 'Le Botaniste',
     type: 'Restaurant',
     url: 'https://restaurant.oryel.dev',
-    screenshot: '/screenshots/restaurant.png',
+    screenshot: '/screenshots/restaurant.webp',
     screenshotAlt: "Page d'accueil du Botaniste, restaurant fictif à Metz",
     description:
       "Menu interactif, réservation en ligne et assistant IA. Pendant le service, quand le téléphone sonne et que personne ne peut décrocher, le site prend le relais.",
@@ -24,7 +24,7 @@ const demos = [
     title: 'Atelier Lumina',
     type: 'Boutique',
     url: 'https://boutique.oryel.dev',
-    screenshot: '/screenshots/boutique.png',
+    screenshot: '/screenshots/boutique.webp',
     screenshotAlt: "Page d'accueil de l'Atelier Lumina, bijouterie artisanale fictive",
     description:
       "Catalogue produits et assistant IA qui joue le rôle de conseiller : il pose des questions, comprend ce que cherche le visiteur et l'oriente vers le bon produit.",
@@ -36,7 +36,7 @@ const demos = [
     title: 'Cabinet Équilibre',
     type: 'Cabinet de kinésithérapie',
     url: 'https://cabinet.oryel.dev',
-    screenshot: '/screenshots/cabinet.png',
+    screenshot: '/screenshots/cabinet.webp',
     screenshotAlt: "Page d'accueil du Cabinet Équilibre, cabinet de kinésithérapie fictif",
     description:
       "Site éditorial avec assistant IA qui répond aux questions courantes (tarifs, soins, prise de rendez-vous) sans jamais se substituer à l'avis de la praticienne.",
@@ -48,7 +48,7 @@ const demos = [
     title: 'Le clos des Mirabelles',
     type: 'Gîte',
     url: 'https://gite.oryel.dev',
-    screenshot: '/screenshots/gite.png',
+    screenshot: '/screenshots/gite.webp',
     screenshotAlt: "Page d'accueil du Clos des Mirabelles, gîte fictif",
     description:
       "Réservation directe avec assistant IA multilingue, qui répond aux questions des voyageurs à toute heure sans remplacer l'accueil du propriétaire.",
@@ -155,6 +155,8 @@ export default function Demos() {
                       <img
                         src={demo.screenshot}
                         alt={demo.screenshotAlt}
+                        width="2880"
+                        height="1800"
                         loading="lazy"
                         className="w-full aspect-[16/10] object-cover object-top"
                       />
