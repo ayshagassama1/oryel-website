@@ -12,6 +12,7 @@ const pageLinks = [
   { label: 'Gîtes & chambres d\'hôtes', path: '/site-internet-gite-chambre-hotes' },
   { label: 'Chatbot IA', path: '/chatbot-ia-site-web' },
   { label: 'Metz', path: '/creation-site-internet-metz' },
+  { label: 'Luxembourg', path: '/creation-site-internet-luxembourg' },
   { label: 'Tarifs', path: '/tarifs' },
   { label: 'Toutes les démos', path: '/demos' },
   { label: 'À propos', path: '/a-propos' },

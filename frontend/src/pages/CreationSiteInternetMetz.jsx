@@ -99,6 +99,7 @@ export default function CreationSiteInternetMetz() {
   const luxRef = useScrollAnimate();
   const stepsRef = useScrollAnimate();
   const commonRef = useScrollAnimate();
+  const assistantRef = useScrollAnimate();
   const pagesRef = useScrollAnimate();
   const demosRef = useScrollAnimate();
   const faqRef = useScrollAnimate();
@@ -220,6 +221,26 @@ export default function CreationSiteInternetMetz() {
         </section>
 
         <section className="py-16 px-4 sm:px-6 bg-white">
+          <div ref={assistantRef} className="scroll-animate max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ce que fait l'assistant, concrètement
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              Il répond aux questions pratiques de vos visiteurs à partir de vos propres
+              informations : vos horaires, vos tarifs si vous les publiez, votre façon de
+              travailler, comment vous contacter. Il ne remplace pas votre expertise, il évite
+              qu'une question simple reste sans réponse.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Un exemple : quelqu'un tombe sur votre site un dimanche soir, cherche une
+              information précise avant de se décider, l'obtient tout de suite et laisse ses
+              coordonnées. Le lundi matin, vous retrouvez un contact déjà renseigné plutôt qu'un
+              appel manqué du week-end.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
           <div ref={pagesRef} className="scroll-animate max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
               Selon votre activité
@@ -244,7 +265,7 @@ export default function CreationSiteInternetMetz() {
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
+        <section className="py-16 px-4 sm:px-6 bg-white">
           <div ref={demosRef} className="scroll-animate max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
               Des exemples ancrés à Metz
@@ -274,7 +295,7 @@ export default function CreationSiteInternetMetz() {
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 bg-white">
+        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
           <div ref={faqRef} className="scroll-animate max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-10">Questions fréquentes</h2>
             <div className="space-y-4">
