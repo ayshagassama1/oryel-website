@@ -49,7 +49,7 @@ def chat_completion(settings: Settings, messages: list[dict]) -> str:
     full_messages = [{"role": "system", "content": SYSTEM_PROMPT}] + messages
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=full_messages,
         temperature=0.7,
         max_tokens=500,
