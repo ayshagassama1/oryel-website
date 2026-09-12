@@ -53,7 +53,7 @@ export default function ProcessSection() {
           </h2>
           <div className="w-12 h-1 bg-teal-500 rounded-full" />
           <p className="text-lg text-gray-500 mt-4 max-w-xl">
-            Quatre étapes. Pas de devis qui explose, pas de délai qui se noie.
+            Quatre étapes, un prix et un délai fixés avant de commencer.
           </p>
         </div>
 
