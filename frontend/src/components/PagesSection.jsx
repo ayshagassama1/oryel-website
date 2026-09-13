@@ -20,7 +20,7 @@ const pages = [
   {
     label: 'Création de site internet à Metz',
     path: '/creation-site-internet-metz',
-    description: 'Développeur basée à Metz, pour les indépendants et commerces du Grand Est.',
+    description: 'Développeur basé à Metz, pour les indépendants et commerces du Grand Est.',
   },
   {
     label: 'Création de site internet au Luxembourg',
