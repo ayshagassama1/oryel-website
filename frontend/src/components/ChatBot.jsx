@@ -11,6 +11,28 @@ const INITIAL_MESSAGE = {
     'Je veux voir le profil tech',
   ],
 };
+
+// Ouverture automatique au scroll : une seule fois par session,
+// uniquement sur écran large (sur mobile la fenêtre masquerait le contenu).
+const AUTO_OPEN_KEY = 'chatbot_auto_opened';
+const AUTO_OPEN_SCROLL_RATIO = 0.6; // fraction de la hauteur d'écran
+const DESKTOP_QUERY = '(min-width: 640px)';
+
+function readSession(key) {
+  try {
+    return sessionStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function writeSession(key, value) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch {
+    /* stockage indisponible : on ignore */
+  }
+}
  
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
@@ -18,16 +40,46 @@ export default function ChatBot() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showTeaser, setShowTeaser] = useState(false);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
+  const autoOpenedRef = useRef(false);
  
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
  
   useEffect(() => {
-    if (open) setTimeout(() => inputRef.current?.focus(), 100);
+    // Pas de focus auto si la fenêtre s'est ouverte au scroll : on ne vole pas le clavier.
+    if (open && !autoOpenedRef.current) setTimeout(() => inputRef.current?.focus(), 100);
+    autoOpenedRef.current = false;
   }, [open]);
+
+  useEffect(() => {
+    if (readSession(AUTO_OPEN_KEY)) return;
+
+    const onScroll = () => {
+      if (window.scrollY < window.innerHeight * AUTO_OPEN_SCROLL_RATIO) return;
+      window.removeEventListener('scroll', onScroll);
+      writeSession(AUTO_OPEN_KEY, '1');
+      if (window.matchMedia(DESKTOP_QUERY).matches) {
+        autoOpenedRef.current = true;
+        setOpen(true);
+      } else {
+        setShowTeaser(true);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const toggle = () => {
+    // Une interaction manuelle désactive l'ouverture automatique pour la session.
+    writeSession(AUTO_OPEN_KEY, '1');
+    setShowTeaser(false);
+    setOpen((o) => !o);
+  };
  
   const send = async (overrideText) => {
     const text = (overrideText ?? input).trim();
@@ -64,8 +116,17 @@ export default function ChatBot() {
  
   return (
     <>
+      {showTeaser && !open && (
+        <button
+          onClick={toggle}
+          className="fixed bottom-24 right-6 z-50 max-w-[15rem] text-left text-sm text-gray-800 bg-white border border-gray-100 rounded-2xl rounded-br-sm shadow-lg px-4 py-3 animate-fade-in"
+        >
+          Une question sur votre projet ? Je réponds en quelques secondes.
+        </button>
+      )}
+
       <button
-        onClick={() => setOpen(!open)}
+        onClick={toggle}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-teal-600 hover:bg-teal-700 text-white rounded-full shadow-lg shadow-teal-200 flex items-center justify-center transition-all duration-200 hover:scale-105"
         aria-label={open ? 'Fermer le chat' : 'Ouvrir le chat'}
       >
