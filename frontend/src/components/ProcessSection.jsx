@@ -1,9 +1,7 @@
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
-import { MessageCircle, PenLine, HeartHandshake, Code } from 'lucide-react';
 
 const steps = [
   {
-    icon: MessageCircle,
     number: '01',
     title: 'On se parle',
     description:
@@ -11,7 +9,6 @@ const steps = [
     duration: '30 min · gratuit',
   },
   {
-    icon: PenLine,
     number: '02',
     title: 'Je vous propose quelque chose de concret',
     description:
@@ -19,7 +16,6 @@ const steps = [
     duration: '2 à 3 jours',
   },
   {
-    icon: Code,
     number: '03',
     title: 'Je développe et je livre',
     description:
@@ -27,7 +23,6 @@ const steps = [
     duration: '1 à 3 semaines selon la formule',
   },
   {
-    icon: HeartHandshake,
     number: '04',
     title: 'Vous prenez la main',
     description:
@@ -58,22 +53,15 @@ export default function ProcessSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, i) => {
-            const Icon = step.icon;
-            return (
+          {steps.map((step, i) => (
               <div
                 key={i}
                 ref={cardRefs[i]}
                 className="scroll-animate bg-white rounded-2xl p-6 border border-gray-100 hover:border-teal-100 hover:shadow-sm transition-all duration-300 flex flex-col gap-4"
               >
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-teal-600" />
-                  </div>
-                  <span className="text-3xl font-bold text-gray-100 select-none">
-                    {step.number}
-                  </span>
-                </div>
+                <span className="text-3xl font-bold text-gray-200 select-none">
+                  {step.number}
+                </span>
 
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2 leading-snug">
@@ -90,8 +78,7 @@ export default function ProcessSection() {
                   </span>
                 </div>
               </div>
-            );
-          })}
+          ))}
         </div>
       </div>
     </section>
