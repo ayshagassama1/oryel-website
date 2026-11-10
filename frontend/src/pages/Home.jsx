@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import DemosSection from '../components/DemosSection';
 import ProcessSection from '../components/ProcessSection';
+import ParcoursSection from '../components/ParcoursSection';
 import ServicesSection from '../components/ServicesSection';
 import PagesSection from '../components/PagesSection';
 import ContactSection from '../components/ContactSection';
@@ -31,6 +32,7 @@ export default function Home() {
         <HeroSection />
         <DemosSection onWantSameSite={handleWantSameSite} />
         <ProcessSection />
+        <ParcoursSection />
         <ServicesSection onWantSameSite={handleWantSameSite} />
         <PagesSection />
         <ContactSection preselectedService={preselectedService} />

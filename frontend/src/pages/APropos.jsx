@@ -1,26 +1,20 @@
 import { Head } from 'vite-react-ssg';
-import { GraduationCap, Award, Globe2, Building2, Linkedin, Plus } from 'lucide-react';
+import { Linkedin, Plus } from 'lucide-react';
 import Seo from '../components/Seo';
 import Navbar from '../components/Navbar';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
+import { parcours } from '../data/parcours';
 
 const techStack = [
   { group: 'Backend', items: ['Python', 'FastAPI', 'Laravel', 'Node.js'] },
   { group: 'Frontend', items: ['React.js', 'Vue.js'] },
   { group: 'IA', items: ['LangChain', 'RAG', 'OpenAI API', 'Ollama'] },
   { group: 'Data', items: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch'] },
-  { group: 'DevOps', items: ['Docker', 'AWS (Certified)', 'CI/CD'] },
+  { group: 'DevOps', items: ['Docker', 'AWS', 'CI/CD'] },
   { group: 'Aussi', items: ['PHP', 'Django'] },
-];
-
-const highlights = [
-  { icon: GraduationCap, text: 'Master Data Science, ISIMA Clermont-Ferrand' },
-  { icon: Award, text: 'AWS Certified Cloud Practitioner' },
-  { icon: Globe2, text: 'Expérience en France, au Luxembourg et au Sénégal' },
-  { icon: Building2, text: 'Co-fondatrice de SunuConseil (IT consulting, Dakar)' },
 ];
 
 const faqItems = [
@@ -61,6 +55,7 @@ export default function APropos() {
   const heroRef = useScrollAnimate();
   const bioRef = useScrollAnimate();
   const stackRef = useScrollAnimate();
+  const parcoursRef = useScrollAnimate();
   const valuesRef = useScrollAnimate();
   const faqRef = useScrollAnimate();
 
@@ -69,7 +64,7 @@ export default function APropos() {
       <Seo
         path="/a-propos"
         title="À propos | Oryel dev"
-        description="Développeur fullstack et IA freelance à Metz. Master Data Science, certifiée AWS, expérience en France, au Luxembourg et au Sénégal."
+        description="Développeur fullstack et IA freelance à Metz. Master Data Science, machine learning au LIMOS, expérience en France, au Luxembourg et au Sénégal."
       />
 
       <Head>
@@ -156,19 +151,6 @@ export default function APropos() {
                   </a>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
-                  {highlights.map((h, i) => {
-                    const Icon = h.icon;
-                    return (
-                      <div key={i} className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl">
-                        <div className="bg-teal-50 p-2 rounded-lg flex-shrink-0">
-                          <Icon className="w-4 h-4 text-teal-600" />
-                        </div>
-                        <span className="text-sm text-gray-700 leading-snug">{h.text}</span>
-                      </div>
-                    );
-                  })}
-                </div>
               </div>
 
               <div ref={stackRef} className="scroll-animate">
@@ -198,6 +180,28 @@ export default function APropos() {
         </section>
 
         <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
+          <div ref={parcoursRef} className="scroll-animate max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-10">
+              Ce que mon parcours change pour vous
+            </h2>
+            <div className="border-t border-gray-200">
+              {parcours.map((item) => (
+                <div
+                  key={item.title}
+                  className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-3 md:gap-10 py-8 border-b border-gray-200"
+                >
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.fact}</p>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                    <p className="text-gray-700 leading-relaxed">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 sm:px-6 bg-white">
           <div ref={valuesRef} className="scroll-animate max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Comment je travaille</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -216,7 +220,7 @@ export default function APropos() {
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 bg-white">
+        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-10">Questions fréquentes</h2>
             <div ref={faqRef} className="scroll-animate space-y-4">

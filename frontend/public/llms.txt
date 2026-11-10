@@ -36,7 +36,7 @@ Outillage : Docker, GitHub Actions
 - Développement backend et IA au Luxembourg
 - Co-fondatrice de SunuConseil, société de conseil IT à Dakar
 - Master Data Science, ISIMA
-- Certifiée AWS
+- Stage en machine learning au LIMOS (laboratoire CNRS)
 
 ## Projets réels
 
