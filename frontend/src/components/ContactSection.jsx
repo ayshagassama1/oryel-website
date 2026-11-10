@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Linkedin, Github, Calendar } from 'lucide-react';
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
 import { api } from '../services/api';
@@ -14,9 +14,17 @@ export default function ContactSection({ preselectedService = '' }) {
     service: preselectedService,
     message: '',
   });
+  // Anti-spam : champ piège (doit rester vide) et heure d'ouverture de la page.
+  const [fax, setFax] = useState('');
+  const startedAtRef = useRef(null);
   const [status, setStatus] = useState('idle'); 
   const [errorMessage, setErrorMessage] = useState('');
  
+  useEffect(() => {
+    // Défini au montage dans le navigateur, pas au rendu statique (build).
+    startedAtRef.current = Date.now();
+  }, []);
+
   useEffect(() => {
     if (preselectedService) {
       setForm((f) => ({ ...f, service: preselectedService }));
@@ -34,6 +42,8 @@ export default function ContactSection({ preselectedService = '' }) {
         email: form.email,
         service: form.service || null,
         message: form.message,
+        fax,
+        elapsed_ms: startedAtRef.current ? Date.now() - startedAtRef.current : null,
       });
       setStatus('success');
       setForm({ name: '', email: '', service: '', message: '' });
@@ -128,6 +138,23 @@ export default function ContactSection({ preselectedService = '' }) {
                     <option>Sur Mesure</option>
                     <option>Autre</option>
                   </select>
+                </div>
+                {/* Champ piège : invisible et hors de la navigation clavier.
+                    Un humain le laisse vide, un robot le remplit. */}
+                <div
+                  aria-hidden="true"
+                  style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}
+                >
+                  <label htmlFor="fax">Laissez ce champ vide</label>
+                  <input
+                    id="fax"
+                    name="fax"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={fax}
+                    onChange={(e) => setFax(e.target.value)}
+                  />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5">
