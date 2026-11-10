@@ -161,8 +161,7 @@ function OtherProjectCard({ project, animRef }) {
           className="w-full aspect-[16/10] object-cover object-top"
         />
         {project.badge && (
-          <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+          <span className="absolute top-3 right-3 inline-flex items-center text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
             {project.badge}
           </span>
         )}
