@@ -40,8 +40,7 @@ export default function HeroSection() {
         className="scroll-animate relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12"
       >
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-100 text-teal-700 text-sm font-medium px-3 py-1.5 rounded-full mb-8">
-            <span className="w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
+          <div className="inline-flex items-center bg-teal-50 border border-teal-100 text-teal-700 text-sm font-medium px-3 py-1.5 rounded-full mb-8">
             Remote · France & Luxembourg
           </div>
  
@@ -73,10 +72,12 @@ export default function HeroSection() {
             </button>
           </div>
  
-          <div className="flex flex-wrap items-center gap-6 mt-14 pt-8 border-t border-gray-100">
+          <div className="flex flex-wrap items-center gap-2.5 mt-14 pt-8 border-t border-gray-100">
             {tags.map((tag, i) => (
-              <span key={i} className="text-sm text-gray-500 flex items-center gap-1.5">
-                <span className="w-1 h-1 bg-teal-400 rounded-full" />
+              <span
+                key={i}
+                className="text-sm text-gray-600 border border-teal-200 px-3 py-1 rounded-full"
+              >
                 {tag}
               </span>
             ))}
