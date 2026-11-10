@@ -5,7 +5,13 @@ import Navbar from '../components/Navbar';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
-import { tiers } from '../components/ServicesSection';
+import {
+  tiers,
+  priceNote,
+  paymentSchedule,
+  refonteOption,
+  maintenancePlans,
+} from '../components/ServicesSection';
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
 
 const faqItems = [
@@ -19,6 +25,26 @@ const faqItems = [
     answer: 'Non, le devis est gratuit et sans engagement. Il arrive sous 48h après un premier échange sur votre projet.',
   },
   {
+    question: 'Comment se passe le paiement ?',
+    answer:
+      "En trois fois : 30 % à la signature du devis, 40 % à la validation de la maquette, 30 % à la livraison. Vous ne réglez jamais la totalité avant d'avoir vu le site terminé.",
+  },
+  {
+    question: 'Quels sont les délais ?',
+    answer:
+      "Comptez 1 à 2 semaines pour la Vitrine Moderne et 2 à 3 semaines avec l'assistant IA, à partir du moment où j'ai vos contenus (textes, photos, informations pratiques). Pour le Sur Mesure, le délai est fixé dans le devis.",
+  },
+  {
+    question: 'Combien de modifications sont prévues ?',
+    answer:
+      "La maquette est validée avec vous avant le développement. Ensuite, deux séries de retours sont incluses sur le site, plus une sur l'assistant pour la formule avec IA. Une demande qui change le périmètre (nouvelle page, nouvelle fonctionnalité) fait l'objet d'un devis complémentaire, validé avant d'être réalisé.",
+  },
+  {
+    question: 'À qui appartient le site ?',
+    answer:
+      "À vous. Le nom de domaine est enregistré à votre nom et le code du site vous est remis à la livraison. Vous pouvez changer de prestataire ou d'hébergeur quand vous le souhaitez, sans frais de sortie.",
+  },
+  {
     question: "L'hébergement et le nom de domaine sont-ils inclus ?",
     answer:
       'Pour les formules Vitrine Moderne et Vitrine + Assistant IA, oui, la première année. Pour le Sur Mesure, ça se décide selon le projet.',
@@ -26,7 +52,12 @@ const faqItems = [
   {
     question: 'Y a-t-il des frais récurrents après la livraison ?',
     answer:
-      "L'hébergement et le nom de domaine se renouvellent chaque année après la première, à un coût modeste. Aucun abonnement caché au-delà de ça.",
+      "Seulement le renouvellement de l'hébergement et du nom de domaine, chaque année après la première, à un coût modeste. La maintenance mensuelle est une option, pas une obligation.",
+  },
+  {
+    question: 'Que se passe-t-il après les trois mois de support ?',
+    answer:
+      "Vous choisissez. Le site reste en ligne sans abonnement. Si vous préférez que je continue à m'en occuper, la maintenance prend le relais à partir de 49 € par mois, sans engagement. Sinon, les modifications ponctuelles se font sur devis.",
   },
   {
     question: 'Puis-je commencer avec une formule et évoluer ensuite ?',
@@ -37,6 +68,11 @@ const faqItems = [
     question: "Le tarif change-t-il selon le secteur d'activité ?",
     answer:
       "Non. Le tarif dépend du travail réel : nombre de pages, contenu à rédiger, complexité de l'assistant. Un restaurant et un cabinet paient le même prix à complexité égale.",
+  },
+  {
+    question: 'Travaillez-vous uniquement à Metz ?',
+    answer:
+      "Non. Tout se fait à distance, en visio ou par e-mail : je travaille avec des clients à Metz, Thionville, Nancy, au Luxembourg et ailleurs en France.",
   },
 ];
 
@@ -56,6 +92,7 @@ const faqJsonLd = {
 export default function Tarifs() {
   const heroRef = useScrollAnimate();
   const tiersRef = useScrollAnimate();
+  const maintenanceRef = useScrollAnimate();
   const howRef = useScrollAnimate();
   const fitRef = useScrollAnimate();
   const faqRef = useScrollAnimate();
@@ -134,6 +171,31 @@ export default function Tarifs() {
                       {tier.delay}
                     </p>
 
+                    <dl
+                      className={`mb-6 text-sm border-t ${
+                        tier.recommended ? 'border-white/20' : 'border-gray-100'
+                      }`}
+                    >
+                      {tier.specs.map((spec) => (
+                        <div
+                          key={spec.label}
+                          className={`flex justify-between gap-4 py-2 border-b ${
+                            tier.recommended ? 'border-white/20' : 'border-gray-100'
+                          }`}
+                        >
+                          <dt className={tier.recommended ? 'text-teal-100' : 'text-gray-500'}>
+                            {spec.label}
+                          </dt>
+                          <dd
+                            className={`text-right font-medium ${
+                              tier.recommended ? 'text-white' : 'text-gray-900'
+                            }`}
+                          >
+                            {spec.value}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
                     <ul className="space-y-3 mb-8 flex-1">
                       {tier.items.map((item, j) => (
                         <li key={j} className="flex items-start gap-2.5">
@@ -163,10 +225,52 @@ export default function Tarifs() {
                 );
               })}
             </div>
+            <p className="text-center text-sm text-gray-500 mt-8">{priceNote}</p>
+            <div className="mt-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <div className="md:w-56 shrink-0">
+                <h2 className="text-lg font-bold text-gray-900">{refonteOption.title}</h2>
+                <p className="text-xl font-bold text-teal-600">{refonteOption.price}</p>
+              </div>
+              <p className="text-gray-600 leading-relaxed">{refonteOption.description}</p>
+            </div>
+          </div>
+        </section>
+        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
+          <div ref={maintenanceRef} className="scroll-animate max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Après la livraison</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-10 max-w-3xl">
+              Chaque formule inclut trois mois de support après la mise en ligne. Ensuite, la
+              maintenance est facultative, sans engagement, et se résilie d'un mois sur l'autre.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {maintenancePlans.map((plan) => (
+                <div
+                  key={plan.title}
+                  className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col"
+                >
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{plan.title}</h3>
+                  <p className="mb-6">
+                    <span className="text-2xl font-bold text-teal-600">{plan.price}</span>{' '}
+                    <span className="text-sm text-gray-500">{plan.period}</span>
+                  </p>
+                  <ul className="text-sm text-gray-600 border-t border-gray-100">
+                    {plan.items.map((item) => (
+                      <li key={item} className="py-2.5 border-b border-gray-100 leading-relaxed">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-gray-500 mt-6">
+              Sans maintenance, le site reste en ligne et fonctionne normalement. Les
+              modifications ponctuelles se font alors sur devis.
+            </p>
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
+        <section className="py-16 px-4 sm:px-6 bg-white">
           <div ref={howRef} className="scroll-animate max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Comment le prix se décide</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -185,10 +289,19 @@ export default function Tarifs() {
               si vous demandez un ajout qui change le périmètre initial. Dans ce cas, l'écart se
               discute avant d'être réalisé, jamais après.
             </p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-10 mb-4">Paiement en trois fois</h3>
+            <ol className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {paymentSchedule.map((step) => (
+                <li key={step.moment} className="rounded-xl border border-gray-100 bg-gray-50 p-5">
+                  <span className="block text-2xl font-bold text-teal-600">{step.share}</span>
+                  <span className="text-sm text-gray-600">{step.moment}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 bg-white">
+        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
           <div ref={fitRef} className="scroll-animate max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Quelle formule pour quelle activité</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -220,7 +333,7 @@ export default function Tarifs() {
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 bg-gray-50/80">
+        <section className="py-16 px-4 sm:px-6 bg-white">
           <div ref={faqRef} className="scroll-animate max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-10">Questions fréquentes</h2>
             <div className="space-y-4">

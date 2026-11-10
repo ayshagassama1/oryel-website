@@ -11,6 +11,11 @@ export const tiers = [
     price: '1 200 € - 1 800 €',
     delay: 'Livré en 1 à 2 semaines',
     recommended: false,
+    specs: [
+      { label: 'Pages', value: '5 à 7' },
+      { label: 'Maquette', value: '1, validée avant le développement' },
+      { label: 'Retours inclus', value: '2 séries de modifications' },
+    ],
     items: [
       'Site responsive de 5 à 7 pages',
       'Design sur mesure pour votre activité',
@@ -27,6 +32,11 @@ export const tiers = [
     price: '2 500 € - 3 500 €',
     delay: 'Livré en 2 à 3 semaines',
     recommended: true,
+    specs: [
+      { label: 'Pages', value: '5 à 7' },
+      { label: 'Maquette', value: '1, validée avant le développement' },
+      { label: 'Retours inclus', value: '2 séries sur le site, 1 sur l\'assistant' },
+    ],
     items: [
       'Tout ce qui est dans la Vitrine Moderne',
       'Assistant IA basé sur vos informations (menu, horaires, services, FAQ)',
@@ -42,6 +52,9 @@ export const tiers = [
     price: 'À partir de 3 500 €',
     delay: 'Délai selon le projet',
     recommended: false,
+    specs: [
+      { label: 'Périmètre', value: 'Pages, maquettes et retours fixés dans le devis' },
+    ],
     items: [
       'Intégration avec vos outils existants (caisse, planning, CRM)',
       'Automatisations spécifiques à votre métier',
@@ -50,6 +63,47 @@ export const tiers = [
       'Tout le reste, on en discute',
     ],
     cta: 'Demander un devis',
+  },
+];
+
+export const priceNote =
+  'Prix nets. TVA non applicable, art. 293 B du CGI.';
+
+export const paymentSchedule = [
+  { share: '30 %', moment: 'à la signature du devis' },
+  { share: '40 %', moment: 'à la validation de la maquette' },
+  { share: '30 %', moment: 'à la livraison du site' },
+];
+
+export const refonteOption = {
+  title: 'Option refonte',
+  price: '+ 400 € à 600 €',
+  description:
+    "Vous avez déjà un site ? J'analyse l'existant, je reprends le contenu utile et je mets en place les redirections pour garder le référencement déjà acquis. S'ajoute à n'importe quelle formule.",
+};
+
+export const maintenancePlans = [
+  {
+    title: 'Suivi',
+    price: '49 €',
+    period: 'par mois',
+    items: [
+      'Mises à jour techniques et de sécurité',
+      'Sauvegardes et surveillance du site',
+      'Correction des bugs',
+      '30 minutes de modifications par mois (horaires, tarifs, photos)',
+    ],
+  },
+  {
+    title: 'Suivi + Assistant IA',
+    price: '89 €',
+    period: 'par mois',
+    items: [
+      'Tout ce que comprend la formule Suivi',
+      "Mise à jour des informations de l'assistant",
+      'Relevé mensuel des questions posées par vos clients',
+      "Consommation du modèle d'IA incluse",
+    ],
   },
 ];
 
@@ -170,6 +224,13 @@ export default function ServicesSection({ onWantSameSite }) {
             );
           })}
         </div>
+
+        <p className="text-center text-sm text-gray-500 mt-8">
+          {priceNote} Paiement en trois fois, maintenance en option dès 49 € par mois.{' '}
+          <a href="/tarifs" className="text-teal-600 hover:underline">
+            Voir le détail des tarifs
+          </a>
+        </p>
       </div>
     </section>
   );

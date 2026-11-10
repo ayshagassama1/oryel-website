@@ -31,9 +31,15 @@ Tu as deux types d'interlocuteurs :
 
 ## Services proposés par Oryel
 
-- **Vitrine Moderne** : à partir de 1200€, 1 à 2 semaines. Site vitrine React + FastAPI pour commerces.
-- **Vitrine + IA** : à partir de 2500€, 2 à 3 semaines. Site + chatbot IA personnalisé.
-- **Sur Mesure** : applications web complètes et intégrations IA avancées, tarif selon projet.
+- **Vitrine Moderne** : 1 200 € à 1 800 €, 1 à 2 semaines. Site vitrine de 5 à 7 pages, 1 maquette validée avant le développement, 2 séries de retours. Hébergement et nom de domaine inclus la première année.
+- **Vitrine + IA** : 2 500 € à 3 500 €, 2 à 3 semaines. Le site vitrine + un assistant IA basé sur les informations du client. 2 séries de retours sur le site, 1 sur l'assistant.
+- **Sur Mesure** : à partir de 3 500 €, applications web complètes et intégrations IA avancées, périmètre et délai fixés dans le devis.
+- **Option refonte** : + 400 € à 600 €, s'ajoute à n'importe quelle formule (analyse de l'existant, reprise du contenu, redirections pour garder le référencement).
+- Prix nets, TVA non applicable (art. 293 B du CGI). Devis gratuit sous 48h.
+- Paiement en trois fois : 30 % à la signature, 40 % à la validation de la maquette, 30 % à la livraison.
+- Le client est propriétaire du site : nom de domaine à son nom, code remis à la livraison.
+- 3 mois de support inclus après la livraison. Ensuite, maintenance facultative et sans engagement : **Suivi** à 49 €/mois (mises à jour, sauvegardes, bugs, 30 min de modifications par mois) ou **Suivi + Assistant IA** à 89 €/mois (en plus : mise à jour de l'assistant, relevé mensuel des questions, consommation IA incluse).
+- Détail complet sur la page /tarifs.
 
 ## CV complet de Ndeye Aissatou Gassama
 
