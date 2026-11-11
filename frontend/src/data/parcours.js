@@ -16,11 +16,11 @@ export const parcours = [
     text: "En agence, j'ai construit des assistants IA branchés sur les outils internes de clients, pour automatiser des tâches métier qui revenaient sans cesse. Je ne découvre pas l'IA avec votre projet.",
   },
   {
-    fact: 'SunuMenu, menus par QR code, en production chez deux restaurants pilotes',
+    fact: 'SunuMenu et le site de SunuConseil, en production sur AWS',
     title: 'Un hébergement qui coûte peu',
     short:
-      "Même architecture que SunuMenu, en production chez deux restaurants : presque rien à payer tant que le trafic reste celui d'un commerce.",
-    text: "SunuMenu tourne sur une architecture qui ne coûte presque rien tant que le trafic reste celui d'un commerce. Votre site est construit de la même façon. C'est ce qui me permet d'annoncer un hébergement à coût modeste, et un assistant IA dont la facture reste prévisible.",
+      "Même architecture que SunuMenu et le site de SunuConseil : moins d'1 $ d'hébergement en octobre 2026 pour les deux réunis.",
+    text: "SunuMenu et le site de SunuConseil tournent sur une architecture qui ne coûte presque rien tant que le trafic reste celui d'une petite entreprise : moins d'1 $ d'hébergement en octobre 2026 pour les deux. Votre site est construit de la même façon. C'est ce qui me permet d'annoncer un hébergement à coût modeste, et un assistant IA dont la facture reste prévisible.",
   },
   {
     fact: 'Co-fondatrice de SunuConseil, conseil IT à Dakar, depuis 2025',

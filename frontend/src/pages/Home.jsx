@@ -3,6 +3,7 @@ import Seo from '../components/Seo';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import DemosSection from '../components/DemosSection';
+import CaseStudiesSection from '../components/CaseStudiesSection';
 import ProcessSection from '../components/ProcessSection';
 import ParcoursSection from '../components/ParcoursSection';
 import ServicesSection from '../components/ServicesSection';
@@ -31,6 +32,7 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <DemosSection onWantSameSite={handleWantSameSite} />
+        <CaseStudiesSection />
         <ProcessSection />
         <ParcoursSection />
         <ServicesSection onWantSameSite={handleWantSameSite} />

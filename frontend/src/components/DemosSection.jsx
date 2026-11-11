@@ -1,5 +1,5 @@
 import { useScrollAnimate } from '../hooks/useScrollAnimate';
-import { ExternalLink, Utensils, ShoppingBag, Stethoscope, Globe, QrCode, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const clientDemos = [
   {
@@ -51,38 +51,6 @@ const clientDemos = [
     bgColor: 'bg-rose-50',
   },
 ];
-
-const otherProjects = [
-  {
-    title: 'SunuConseil',
-    type: 'Site vitrine corporate',
-    badge: null,
-    description:
-      "Vitrine et back-office d'un cabinet de conseil IT fondé à Dakar. Authentification, dashboard admin, gestion de blog et d'équipe. ",
-    stack: ['Laravel', 'Vue.js', 'MySQL', 'AWS', 'EC2'],  
-    url: 'https://sunuconseil.com',
-    screenshot: '/screenshots/sunuconseil.webp',
-    screenshotAlt: "Page d'accueil de SunuConseil, cabinet de conseil IT à Dakar",
-    accentColor: 'text-orange-600',
-    borderColor: 'border-orange-200',
-    bgColor: 'bg-orange-50',
-  },
-  {
-    title: 'SunuMenu',
-    type: 'SaaS · Menu digital QR',
-    badge: 'En cours',
-    description:
-      "Digitalise la carte d'un restaurant en quelques heures : un QR code par table, les plats en photos sur le téléphone du client, un dashboard pour tout gérer. V1 live, commande et paiement en cours de développement.",
-    stack: ['React', 'FastAPI', 'AWS Lambda', 'PostgreSQL'],
-      url: 'https://sunumenu.sunuconseil.com',
-    screenshot: '/screenshots/sunumenu.webp',
-    screenshotAlt: "Interface de SunuMenu, menu digital par QR code pour restaurants",
-    accentColor: 'text-teal-600',
-    borderColor: 'border-teal-200',
-    bgColor: 'bg-teal-50',
-  },
-];
-
 
 function ClientDemoCard({ demo, animRef }) {
   return (
@@ -144,69 +112,8 @@ function ClientDemoCard({ demo, animRef }) {
   );
 }
 
-function OtherProjectCard({ project, animRef }) {
-  return (
-    <div
-      ref={animRef}
-      className="scroll-animate group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-gray-100 transition-all duration-300 hover:-translate-y-0.5"
-    >
-      {/* Capture du projet */}
-      <div className={`relative border-b ${project.borderColor}`}>
-        <img
-          src={project.screenshot}
-          alt={project.screenshotAlt}
-          width="2880"
-          height="1800"
-          loading="lazy"
-          className="w-full aspect-[16/10] object-cover object-top"
-        />
-        {project.badge && (
-          <span className="absolute top-3 right-3 inline-flex items-center text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
-            {project.badge}
-          </span>
-        )}
-      </div>
-
-      {/* Contenu */}
-      <div className="flex flex-col flex-1 p-6">
-        <div className="mb-1">
-          <span className={`text-xs font-semibold uppercase tracking-wide ${project.accentColor}`}>
-            {project.type}
-          </span>
-        </div>
-        <h3 className="text-base font-bold text-gray-900 mb-2">{project.title}</h3>
-        <p className="text-sm text-gray-500 leading-relaxed flex-1">{project.description}</p>
-
-        {project.stack && (
-          <div className="flex flex-wrap gap-1.5 mt-3">
-            {project.stack.map((tech) => (
-              <span
-                key={tech}
-                className="text-xs font-medium text-gray-600 bg-gray-50 border border-gray-100 px-2 py-0.5 rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
-
-        <a  href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors"
-        >
-          Voir le projet
-          <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-      </div>
-    </div>
-  );
-}
-
-
 export default function DemosSection({ onWantSameSite }) {
   const titleRef = useScrollAnimate();
-  const subTitleRef = useScrollAnimate();
 
   const demo0Ref = useScrollAnimate(100);
   const demo1Ref = useScrollAnimate(200);
@@ -214,9 +121,6 @@ export default function DemosSection({ onWantSameSite }) {
   const demo3Ref = useScrollAnimate(400);
   const demoRefs = [demo0Ref, demo1Ref, demo2Ref, demo3Ref];
 
-  const proj0Ref = useScrollAnimate(100);
-  const proj1Ref = useScrollAnimate(200);
-  const projRefs = [proj0Ref, proj1Ref];
 
   return (
     <section id="demos" className="py-20 bg-white">
@@ -240,7 +144,7 @@ export default function DemosSection({ onWantSameSite }) {
           ))}
         </div>
 
-        <div className="flex justify-center mb-20">
+        <div className="flex justify-center">
           <button
             onClick={() => onWantSameSite?.('Vitrine + IA')}
             className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-teal-100 hover:-translate-y-0.5 text-sm"
@@ -249,23 +153,6 @@ export default function DemosSection({ onWantSameSite }) {
             <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
-
-        {/*  Autres projets  */}
-        <div ref={subTitleRef} className="scroll-animate mb-8 pt-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            Autres projets
-          </h3>
-          <p className="text-gray-500 text-sm max-w-2xl">
-            En dehors des missions client, je construis des produits. Deux projets en cours avec SunuConseil.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {otherProjects.map((project, i) => (
-            <OtherProjectCard key={i} project={project} animRef={projRefs[i]} />
-          ))}
-        </div>
-
       </div>
     </section>
   );
